@@ -1,0 +1,6 @@
+function Chats() {
+    return (
+        console.log('chat')
+    );
+}
+export default Chats;
