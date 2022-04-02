@@ -1,6 +1,6 @@
 function Chats() {
     return (
-        console.log('chat')
+        <h1>chat</h1>
     );
 }
 export default Chats;
