@@ -1,6 +1,6 @@
 import { Redirect, Link, useNavigate } from 'react-router-dom'
 import {React , useEffect , useState} from 'react';
-
+import { users } from './Users';
 
 
 function Signin() {
@@ -9,17 +9,10 @@ function Signin() {
     const [password, setPassword] = useState("");
 
 
-    // const check = function(name, pass){
-    //     for(int i=0; )
-    //     if(name === userName && pass === password)
-    //         navigate('/chats')
-    // }
-
-    const users = [ {name: "Zan" ,nickName:"Ofri" , password: "ofri4516"},
-        {name: "Ofri" ,nickName:"Ofri" , password: "ofri4516"}]
     
     const navigate = useNavigate();
-    const goToLoginPage = () =>{
+
+    const goToChatPage = () =>{
         let transfer = false 
         for(let i=0;i<users.length;i++){
             if(users[i].name == userName && users[i].password == password){
@@ -31,27 +24,6 @@ function Signin() {
             alert('user or password are incorrect')
         
     }
-    //
-//user.name === userName && user.password === password ? navigate('/chats') : alert('y')
-
-  //  useEffect(navigate("chats"), [onclick]);
-
-
-
-    // const routeChange = ()=> {
-        
-    // }
-
-    const checkIfUserExits = function(){
-       
-        //navigate("chats");
-        
-        alert("password or usernane ar incorrect");
-    }
-
-    //document.getElementById("btn").addEventListener("click", checkIfUserExits());
-
-
 
 
     return (
@@ -72,7 +44,7 @@ function Signin() {
                 <label htmlFor='lname'>Password</label>
             </div>
 
-            <bottun type="submit" to="/chats" id="btn" className="btn btn-primary" onClick={goToLoginPage} > Submit</bottun>
+            <bottun type="submit" to="/chats" id="btn" className="btn btn-primary" onClick={goToChatPage} > Sign in</bottun>
             </form>
             <Link to='/register'>Register</Link>
             </div>
