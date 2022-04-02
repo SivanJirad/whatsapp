@@ -1,0 +1,15 @@
+
+  .form-control{
+    height: 60%;
+    width: 80%;
+    border-radius: 15px;
+  }
+
+  .center {
+
+    font-family: Times New Roman;
+    text-align:start;
+    margin: auto;
+    width: 30%;
+    padding: 60px;
+  }
