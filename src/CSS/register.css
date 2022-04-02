@@ -6,10 +6,27 @@
   }
 
   .center {
-
     font-family: Times New Roman;
     text-align:start;
     margin: auto;
     width: 30%;
     padding: 60px;
   }
+
+  #notValid {
+      color: red; 
+      font-size: 14pt;
+  }
+
+  #weak {
+      color: orange;
+      font-size: 14pt;
+
+  }
+
+  #strong {
+    color: green;
+    font-size: 14pt;
+
+  }
+
