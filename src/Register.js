@@ -107,13 +107,16 @@ return (
         </div>
 
         <div className="form-floating">
-            <input type="password" className="form-control" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}> </input>
+            <input type="password" className="form-control" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}>
 
-        <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
+                
+                 </input>
+                 <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
             title="password must be at least 8 charecters, contains at least one number and letter"></i>
             <label htmlFor="Password">Password</label>
-         
-        </div>
+    
+     
+</div>
 
         <span id="StrongPass"></span> <br></br>
 

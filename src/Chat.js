@@ -1,8 +1,16 @@
+import {users} from './Users'
+
+
 function Chat(){
+
+    function Item(props) {
+        return <li>I am a { props.name }</li>;
+      }
+
 
     return(
         <div>
-            hello
+            {users.map((user) => <Item name={user.name} />)}
         </div>
 
 

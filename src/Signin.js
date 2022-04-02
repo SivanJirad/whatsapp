@@ -13,7 +13,7 @@ function Signin() {
     const navigate = useNavigate();
 
     const goToChatPage = () =>{
-        let transfer = false 
+        let transfer = false; 
         for(let i=0;i<users.length;i++){
             if(users[i].name == userName && users[i].password == password){
                 navigate('/chats') 
@@ -22,7 +22,6 @@ function Signin() {
         }
         if(!transfer)
             alert('user or password are incorrect')
-        
     }
 
 
@@ -44,7 +43,7 @@ function Signin() {
                 <label htmlFor='lname'>Password</label>
             </div>
 
-            <bottun type="submit" to="/chats" id="btn" className="btn btn-primary" onClick={goToChatPage} > Sign in</bottun>
+            <bottun type="submit" id="btn" className="btn btn-primary" onClick={goToChatPage} > Sign in</bottun>
             </form>
             <Link to='/register'>Register</Link>
             </div>
