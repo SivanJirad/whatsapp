@@ -42,9 +42,6 @@ function Signin() {
         
     // }
 
-
-
-    
     const checkIfUserExits = function(){
        
         //navigate("chats");
