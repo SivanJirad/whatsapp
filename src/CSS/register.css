@@ -1,18 +1,25 @@
+/* @import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins"; */
 
   .form-control{
     height: 60%;
-    width: 100%;
+    width: 80%;
     border-radius: 15px;
+  }
+
+  .form-floating{
+    position: relative;
+    left: 38pt;
   }
 
   .center {
     font-family: Times New Roman;
     text-align:start;
     margin: auto;
-    width: 30%;
+    width: 40%;
     padding: 60px;
-    position: relative;
-
+    background-color: rgb(248, 249, 250);
   }
 
   #notValid {
@@ -32,8 +39,76 @@
 
   }
 
-  /* .h1{
+  body{
+    background-color: rgb(223, 221, 226); 
+  }
+
+
+  #logo{
+    height: 100pt;
+    position: relative;
+    top: 34pt;
+    
+
+  }
+
+
+  
+
+  .btn{
+    border-radius: 15px;
+    width: 100px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: #8064A2;
+  }
+
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2;
+}
+
+.link{
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: rgb(156, 153, 153);
+  width: 300px;
+  /* text-align: center;  */
+
+}
+
+.break_bottun{
+  content: "";
+  margin: 9em;
+  display: block;
+  font-size: 24%;
+}
+
+.break_link{
+  content: "";
+  margin: 18em;
+  display: block;
+  font-size: 24%;
+
+}
+
+
+
+  h1{
+    color: #111; font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 60px; 
+    font-weight: 700; 
+    line-height: 64px; 
+    margin: 0 0 0; 
+    padding: 20px 30px; 
+    text-align: center; 
+    text-transform: uppercase;
     font-family: Times New Roman;
 
-  } */
+  }
 

@@ -12,9 +12,7 @@ function Register() {
     const [image, setImage] = useState("");
     const [password, setPassword] = useState("");
 
-
     const navigate = useNavigate();
-    let valid = false;
 
     
     const chekUserName = function() {
@@ -24,8 +22,8 @@ function Register() {
         var messageUser = document.getElementById('userNameValid');
 
         for (let i = 0; i < users.length; i++) {
-            if (users[i].userName === user) {
-                UserNameExsist = true;
+            if (users[i].name === user) {
+                return true;
             }}
 
         if (UserNameExsist || user === ''){
@@ -86,12 +84,11 @@ function Register() {
 
 */
 return (
-    <div className='center'>
+    <div className='center shadow-lg p-3 mb-5 bg-white rounded'>
 
         <h1> Registration:</h1>
         <br></br>
-
-        <form action="/action_page.php" method="get">
+        <form method='post'>
 
         <div className="form-floating">
             <input type="text" className="form-control" id="username" name="username"  placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value) } ></input>
@@ -100,7 +97,7 @@ return (
         <span id="userNameValid"></span> <br></br>
 
         <div className="form-floating">
-            <input type="text" className="form-control" id="lname" name="lname" placeholder="Nick Name" required onChange={event => setNickName(event.target.value)}></input>
+            <input type="text" className="form-control" id="lname" name="lname" placeholder="Nick Name" onChange={event => setNickName(event.target.value)}></input>
             <label htmlFor='lname'>Nick Name</label>
         </div>
 
@@ -128,10 +125,9 @@ return (
         </div>
 
         <br></br>
-        <button type="submit" className="btn btn-primary" id="submitButten" onClick={shoot}>Submit</button>
+        <button type="submit" className="btn btn-secondary" id="submitButten" onClick={shoot}>Submit</button>
 
         <Link to='/'>Sign in</Link>
-
         </form>
 
   </div>    );
