@@ -100,7 +100,7 @@ return (
         <span id="userNameValid"></span> <br></br>
 
         <div className="form-floating">
-            <input type="text" className="form-control" id="lname" name="lname" placeholder="Nick Name" onChange={event => setNickName(event.target.value)}></input>
+            <input type="text" className="form-control" id="lname" name="lname" placeholder="Nick Name" required onChange={event => setNickName(event.target.value)}></input>
             <label htmlFor='lname'>Nick Name</label>
         </div>
 
