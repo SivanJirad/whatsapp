@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link , useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { users } from './Users';
 import "./CSS/register.css";
+import logo from './wenLogo.jpg' 
 
 
 
@@ -14,8 +15,8 @@ function Register() {
 
     const navigate = useNavigate();
 
-    
-    const chekUserName = function() {
+
+    const chekUserName = function () {
         let UserNameExsist = false
         var user = document.getElementById('username').value;
 
@@ -24,9 +25,10 @@ function Register() {
         for (let i = 0; i < users.length; i++) {
             if (users[i].name === user) {
                 return true;
-            }}
+            }
+        }
 
-        if (UserNameExsist || user === ''){
+        if (UserNameExsist || user === '') {
             messageUser.innerHTML = '<p>user is not valid</p>';
         }
         else {
@@ -34,7 +36,7 @@ function Register() {
 
         }
     }
-    
+
     const checkPass2 = function () {
         var pass = document.getElementById('Password').value
         var message = document.getElementById('StrongPass')
@@ -62,75 +64,101 @@ function Register() {
         else if (password !== checkPass) {
             alert('Password is not matching');
         }
-        else{
-            users.push({name : userName, nickName : nickName, image : image,  password : password })
+        else {
+            users.push({ name: userName, nickName: nickName, image: image, password: password })
             navigate('/chats')
-            }
         }
-    
-/*
-    const alertPass =function(message){
-        var pass = document.getElementById('alertMessage');
-        pass.innerHTML = '<span className="alert alert-primary" role="alert">' + message + '</span>'
     }
 
-    const shoutDownAlert= function(){
-        var pass = document.getElementById('alertMessage');
-        pass.innerHTML = ''
-    }
+    return (
+<div>
 
-    //סימן הקריאה - לא הצלחתי עדיין לטפל בו 
-    <i class="bi bi-info-circle"  onMouseOver={alertPass('password must be at least 8 charecters, contain at least one number and  letter')} onMouseOut={shoutDownAlert}></i>
+<img id="logo" src={logo}></img>
 
-*/
-return (
-    <div className='center shadow-lg p-3 mb-5 bg-white rounded'>
+       <div className='center_register shadow-lg p-3 mb-5 bg-white rounded'>
 
-        <h1> Registration:</h1>
-        <br></br>
-        <form method='post'>
+            <h1> Registration</h1>
+            <br></br>
+            <form method='post'>
 
-        <div className="form-floating">
-            <input type="text" className="form-control" id="username" name="username"  placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value) } ></input>
-            <label htmlFor="username">User Name</label>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 form-floating">
+                            <input type="text" className="form-control form-control-register" id="username" name="username"
+                                placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
+                            <label className='string' htmlFor="username">User Name</label>
+                            <span id="userNameValid"></span> <br></br>
+                        </div>
+                        <div class="col-md-5 form-floating">
+                            <input type="password" className="form-control form-control-register" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}>
+                            </input>
+                            <label htmlFor="Password">Password</label>
+                            <span id="StrongPass"></span> <br></br>
+                        </div>
+                        <div class="col-md-2 form-floating icon">
+                            <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
+                                title="password must be at least 8 charecters,< you must have at least one number and letter"></i>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 form-floating">
+                            <input type="text" className="form-control form-control-register " id="lname" name="lname" placeholder="Nick Name" onChange={event => setNickName(event.target.value)}></input>
+                            <label htmlFor='lname'>Nick Name</label>
+                        </div>
+                        <div class="col-md-5 form-floating">
+                            <input type="password" className="form-control form-control-register" id="checkPass" nume="pass" placeholder="Check Password"></input>
+                            <label htmlFor="checkPass">Check Password</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+
+                        <div className="mb-3 col-md-6 offset-md-3">
+                            {/* <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label> */}
+                            <label></label>
+                            <input type="file" className="form-control form-control-imag " id="image" name="image" accept="image/png, image/jpeg" onChange={event => setImage(event.target.value)}></input> <br></br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <bottun type="submit" id="btn" className="btn btn-primary" onClick={shoot} > Submit</bottun>
+                            <br  className="break_link"></br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 offset-md-5 link">
+                        Already Have account?&nbsp;
+                        <Link to='/'>Log in</Link>
+                        </div>
+                    </div>
+
+
+
+
+
+                    
+                </div>
+
+
+
+
+
+
+
+            </form>
+
+
+           
+
+  
+
+
         </div>
-        <span id="userNameValid"></span> <br></br>
-
-        <div className="form-floating">
-            <input type="text" className="form-control" id="lname" name="lname" placeholder="Nick Name" onChange={event => setNickName(event.target.value)}></input>
-            <label htmlFor='lname'>Nick Name</label>
         </div>
 
-    
-        <div className="mb-3">
-            {/* <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label> */}
-            <label></label>
-            <input type="file" className="form-control" id="fname" name="fname" accept="image/png, image/jpeg" onChange={event => setImage(event.target.value)}></input> <br></br>
-        </div>
-
-        <div className="form-floating">
-            <input type="password" className="form-control" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}>    
-            </input>
-            <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
-            title="password must be at least 8 charecters, you must have at least one number and letter"></i>
-            <label htmlFor="Password">Password</label>
-            <span id="StrongPass"></span> <br></br>
-
-        </div>
-
-
-        <div className="form-floating">
-            <input type="password" className="form-control" id="checkPass" nume="pass" placeholder="Check Password"></input>
-            <label htmlFor="checkPass">Check Password</label>
-        </div>
-
-        <br></br>
-        <button type="submit" className="btn btn-secondary" id="submitButten" onClick={shoot}>Submit</button>
-
-        <Link to='/'>Sign in</Link>
-        </form>
-
-  </div>    );
+    );
 }
 
 export default Register;
