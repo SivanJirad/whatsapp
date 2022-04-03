@@ -1,7 +1,7 @@
 
   .form-control{
     height: 60%;
-    width: 80%;
+    width: 100%;
     border-radius: 15px;
   }
 
@@ -11,6 +11,8 @@
     margin: auto;
     width: 30%;
     padding: 60px;
+    position: relative;
+
   }
 
   #notValid {
@@ -29,4 +31,9 @@
     font-size: 14pt;
 
   }
+
+  /* .h1{
+    font-family: Times New Roman;
+
+  } */
 
