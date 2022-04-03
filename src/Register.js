@@ -94,7 +94,7 @@ return (
         <form action="/action_page.php" method="get">
 
         <div className="form-floating">
-            <input type="text" className="form-control" id="username" name="username" required placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value) } ></input>
+            <input type="text" className="form-control" id="username" name="username"  placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value) } ></input>
             <label htmlFor="username">User Name</label>
         </div>
         <span id="userNameValid"></span> <br></br>
