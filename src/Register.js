@@ -124,9 +124,11 @@ function Register() {
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
                             <bottun type="submit" id="btn" className="btn btn-primary" onClick={shoot} > Submit</bottun>
-                            <br  className="break_link"></br>
+                            {/* <br  className="break_link"></br> */}
                         </div>
                     </div>
+                    <br></br>
+                    <br></br>
                     <div class="row">
                         <div class="col-md-4 offset-md-5 link">
                         Already Have account?&nbsp;
