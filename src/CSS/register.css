@@ -26,6 +26,15 @@
     border-radius: 15px;
   }
 
+  .right{
+position: absolute;
+left: 45px;  }
+
+  .left{
+    position: sticky;
+    right: 130%;
+  }
+
   #image{
     height: 43%;
     width: 100%;
@@ -45,12 +54,12 @@
   .center_register {
     font-family: Times New Roman;
     text-align:start;
-      /* margin: auto; */
-  width: 50%;
-    /* padding: 80px; */
+      margin: auto;
+    width: 50%;
+    padding: 80px;
     background-color: rgb(248, 249, 250);
     position: absolute; /* or absolute */
-    top: 19%;
+    top: 17.5%;
     left: 25%;
   }
 
@@ -81,7 +90,10 @@
     height: 100pt;
     position: relative;
     top: 34pt;
+    z-index: 2;
   }
+
+
 
 
 
