@@ -73,7 +73,7 @@ function Register() {
     return (
 <div>
 
-<img id="logo" src={logo}></img>
+<img id="reg_logo" src={logo}></img>
 
        <div className='center_register shadow-lg p-3 mb-5 bg-white rounded'>
 
@@ -130,31 +130,16 @@ function Register() {
                     <br></br>
                     <br></br>
                     <div class="row">
-                        <div class="col-md-4 offset-md-5 link">
-                        Already Have account?&nbsp;
+                        <div class="link">
+                        Already have an account?&nbsp;
                         <Link to='/'>Log in</Link>
                         </div>
                     </div>
 
-
-
-
-
-                    
                 </div>
-
-
-
-
-
-
 
             </form>
 
-
-           
-
-  
 
 
         </div>
