@@ -3,7 +3,6 @@ import {Link, useNavigate } from 'react-router-dom';
 import { users,contacts } from './Users';
 import "./CSS/register.css";
 import logo from './wenLogo.jpg' 
-import SentToChat from './SentToChat';
 import Chat from './chat/Chat';
 
 
