@@ -70,8 +70,6 @@ function Register() {
         else {
             users.push({ name: userName, nickName: nickName, image: image, password: password, contacts:contacts});
             navigate('/chats' ,{state: { name: userName, nickName: nickName, image: image, password: password, contacts:contacts}});
-
-
         }
     }
 

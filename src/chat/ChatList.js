@@ -2,7 +2,7 @@ import ChatItem from "./ChatItem";
 
 function ChatList(props){
     return(
-<div>
+<div className="leftMenu">
 {props.contacts.map((item)=> <ChatItem contact={item}/>)}
 </div>
     );

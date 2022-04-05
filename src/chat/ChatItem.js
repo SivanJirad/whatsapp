@@ -1,6 +1,9 @@
+import './chat.css'
+
+
 function ChatItem(props){
     return(
-     <div>
+     <div className="contact btn btn-light border border-dark">
          {props.contact.name}
      </div>
     );
