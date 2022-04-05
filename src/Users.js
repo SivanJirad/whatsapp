@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 // we can't change the array users points on by we can change the elements in the array
 export const users = [];
-
-function AddUser(props){
-    users.push({name : props.name, nickName : props.nickName, image : props.image,  password : props.password })
-}
-
-export default AddUser;
+export const contacts = [{name:"sivan", massage:"hi"},
+{name:"ofri" , massage:"hi"},
+{name:"hila", massage:"hi"},
+{name:"eido", massage:"hi"},
+{name:"mira", massage:"hi"},
+];

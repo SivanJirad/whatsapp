@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { users } from './Users';
+import {Link, useNavigate } from 'react-router-dom';
+import { users,contacts } from './Users';
 import "./CSS/register.css";
 import logo from './wenLogo.jpg' 
+import SentToChat from './SentToChat';
+import Chat from './chat/Chat';
+
+
 
 
 
@@ -40,7 +44,7 @@ function Register() {
     const checkPass2 = function () {
         var pass = document.getElementById('Password').value
         var message = document.getElementById('StrongPass')
-        if (pass.length < 8 || !(/\d/.test(pass)) || !(/[a-zA-Z]/.test(pass))) {
+        if (pass.length < 2 || !(/\d/.test(pass)) || !(/[a-zA-Z]/.test(pass))) {
             message.innerHTML = '<div id="notValid" >not valid</div>'
             return false;
         }
@@ -65,8 +69,10 @@ function Register() {
             alert('Password is not matching');
         }
         else {
-            users.push({ name: userName, nickName: nickName, image: image, password: password })
-            navigate('/chats')
+            users.push({ name: userName, nickName: nickName, image: image, password: password, contacts:contacts});
+            navigate('/chats' ,{state: { name: userName, nickName: nickName, image: image, password: password, contacts:contacts}});
+
+
         }
     }
 
