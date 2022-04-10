@@ -1,9 +1,9 @@
 import { Redirect, Link, useNavigate } from 'react-router-dom'
 import {React , useEffect , useState} from 'react';
 import { users } from './Users';
-import './CSS/register.css'
 import logo from './wenLogo.jpg' 
-
+import './CSS/sign.css'
+import './CSS/project.css'
 
 function Signin() {
 
@@ -14,7 +14,9 @@ function Signin() {
     
     const navigate = useNavigate();
 
-    const goToChatPage = () =>{
+    const goToChatPage = (event) =>{
+        event.preventDefault();
+
         let transfer = false; 
         for(let i=0;i<users.length;i++){
             if(users[i].name == userName && users[i].password == password){
@@ -29,9 +31,8 @@ function Signin() {
 
     return (
 
-     <div>
-
-         <img id="logo" src={logo}></img>
+     <div>    
+                  <img id="logo" src={logo}></img>
   
 
     <div id="sign" className='center shadow-lg p-3 mb-5 bg-white rounded'>                
@@ -52,7 +53,7 @@ function Signin() {
                 <label htmlFor='lname'>Password</label>
             </div>
             <br className="break_bottun"></br>
-            <bottun type="submit" id="btn" className="btn btn-primary" onClick={goToChatPage} > Login</bottun>
+            <button type="submit" id="btn" className="btn btn-primary" onClick={goToChatPage} > Login</button>
 
 
 

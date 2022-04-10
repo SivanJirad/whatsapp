@@ -4,8 +4,7 @@ import { users,contacts } from './Users';
 import "./CSS/register.css";
 import logo from './wenLogo.jpg' 
 import Chat from './chat/Chat';
-
-
+import "./CSS/project.css";
 
 
 
@@ -58,7 +57,8 @@ function Register() {
     }
 
 
-    const shoot = function () {
+    const shoot = function (event) {
+        event.preventDefault();
         var checkPass = document.getElementById('checkPass').value;
 
         if (!checkPass2()) {
@@ -84,38 +84,38 @@ function Register() {
             <br></br>
             <form method='post'>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-5 form-floating">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-5 form-floating">
                             <input type="text" className="form-control form-control-register" id="username" name="username"
                                 placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
                             <label className='string' htmlFor="username">User Name</label>
                             <span id="userNameValid"></span> <br></br>
                         </div>
-                        <div class="col-md-5 form-floating">
+                        <div className="col-md-5 form-floating">
                             <input type="password" className="form-control form-control-register" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}>
                             </input>
                             <label htmlFor="Password">Password</label>
                             <span id="StrongPass"></span> <br></br>
                         </div>
-                        <div class="col-md-2 form-floating icon">
+                        <div className="col-md-2 form-floating icon">
                             <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
                                 title="password must be at least 8 charecters,< you must have at least one number and letter"></i>
                         </div>
 
                     </div>
-                    <div class="row">
-                        <div class="col-md-5 form-floating">
+                    <div className="row">
+                        <div className="col-md-5 form-floating">
                             <input type="text" className="form-control form-control-register " id="lname" name="lname" placeholder="Nick Name" onChange={event => setNickName(event.target.value)}></input>
                             <label htmlFor='lname'>Nick Name</label>
                         </div>
-                        <div class="col-md-5 form-floating">
-                            <input type="password" className="form-control form-control-register" id="checkPass" nume="pass" placeholder="Check Password"></input>
-                            <label htmlFor="checkPass">Check Password</label>
+                        <div className="col-md-5 form-floating">
+                            <input type="password" className="form-control form-control-register" id="checkPass" nume="pass" placeholder="checkPass"></input>
+                            <label htmlFor="checkPass">Confirm Password</label>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div className="row">
 
 
                         <div className="mb-3 col-md-6 offset-md-3">
@@ -124,16 +124,16 @@ function Register() {
                             <input type="file" className="form-control form-control-imag " id="image" name="image" accept="image/png, image/jpeg" onChange={event => setImage(event.target.value)}></input> <br></br>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3">
-                            <bottun type="submit" id="btn" className="btn btn-primary" onClick={shoot} > Submit</bottun>
+                    <div className="row">
+                        <div className="col-md-6 offset-md-3">
+                            <button type="submit" id="btn" className="btn btn-primary" onClick={shoot} > Submit</button>
                             {/* <br  className="break_link"></br> */}
                         </div>
                     </div>
                     <br></br>
                     <br></br>
-                    <div class="row">
-                        <div class="link">
+                    <div className="row">
+                        <div className="link">
                         Already have an account?&nbsp;
                         <Link to='/'>Log in</Link>
                         </div>

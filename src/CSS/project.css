@@ -1,0 +1,46 @@
+
+  
+  .form-control{
+    height: 60%;
+    width: 80%;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .form-floating{
+    position: relative;
+    left: 38pt;
+  }
+
+  h1 {
+    color: #111;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 64px;
+    margin: 0 0 0;
+    padding: 20px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Times New Roman;
+  
+  }
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: #8064A2;
+}
+
+.btn {
+    border-radius: 15px;
+    width: 100px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: #8064A2;
+  }
+  
