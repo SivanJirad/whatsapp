@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import ChatList from "./ChatList";
 import {useState} from 'react';
 import AddContact from './AddContact'
-
+import SendMassage from "./SendMassage";
 import './chat.css'
 
 
@@ -10,14 +10,6 @@ function Chat() {
   const { state } = useLocation();
 
   let [contact, setContact] = useState(state.contacts);
-
-
-
-
-
-
-
-  
 
 
   return (
@@ -30,6 +22,7 @@ function Chat() {
 
             <AddContact/>
 
+
           </div>
 
           <div className="scroll">
@@ -38,7 +31,8 @@ function Chat() {
         </div>  
         <div className="col-md-8" id="chats">
           <div className="top-row"></div>
-
+          <div>          <SendMassage/>
+</div>
         </div>
       </div>
     </div>

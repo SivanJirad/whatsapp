@@ -1,12 +1,26 @@
 import './chat.css'
+import { React, useEffect, useState } from 'react';
+import { contacts } from '../Users';
+
+function ChatItem() {
 
 
-function ChatItem(props) {
+    const [nickName, setNickName] = useState("");
+
+
+    const addContact = function (event) {
+        event.preventDefault();
+        contacts.push({nickName: nickName, massage:"g"});
+        }
+    
+
+
+
+
+
     return (
         <div >
             <i class="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-
-
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
@@ -18,13 +32,14 @@ function ChatItem(props) {
                             <form>
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">Nick Name</label>
-                                    <input type="text" class="form-control" id="recipient-name"></input>
+                                    <input type="text" class="form-control" id="recipient-name" onChange={event => setNickName(event.target.value)}></input>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary ">Add</button>
+                            {/* אין תנאי שבודק את האיש קשר שהוכנס    */}
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={addContact}>Add</button>
                         </div>
                     </div> 
                 </div>

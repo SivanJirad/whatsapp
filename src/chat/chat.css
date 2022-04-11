@@ -12,6 +12,20 @@
     background-color: lightgray;
 }
 
+.down-row{
+    /* height: 40px;
+    width: 100%; */
+    background-color: rgb(206, 50, 50);
+    /* position: absolute;
+    bottom: 0; */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
 
 .contact{
     height: 80px;
