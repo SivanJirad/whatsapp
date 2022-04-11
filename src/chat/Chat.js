@@ -1,37 +1,48 @@
 import { useLocation } from "react-router-dom";
 import ChatList from "./ChatList";
+import {useState} from 'react';
+import AddContact from './AddContact'
+
 import './chat.css'
 
 
-function Chat(){
-    const {state} = useLocation();
+function Chat() {
+  const { state } = useLocation();
 
-    return(
-<div className="container center-chats">
-  <div className="row">
-
-    <div className="col-md-4 overflow-auto" id="leftMenu">
+  let [contact, setContact] = useState(state.contacts);
 
 
 
-    <div className="top-row ">
-      
-  <i class="bi bi-person-plus"></i>
-    </div>
 
 
 
-            {<ChatList contacts={state.contacts}/>}
 
   
-    </div>
-    <div className="col-md-8" id ="chats">
-    <div className="top-row"></div>
 
-  </div>
-</div>
-</div>
-    );
+
+  return (
+    <div className="container center-chats">
+      <div className="row">
+
+        <div className="col-md-4" id="leftMenu">
+
+          <div className="top-row ">
+
+            <AddContact/>
+
+          </div>
+
+          <div className="scroll">
+            {<ChatList contacts={contact} />}
+          </div>
+        </div>  
+        <div className="col-md-8" id="chats">
+          <div className="top-row"></div>
+
+        </div>
+      </div>
+    </div>
+  );
 }
 export default Chat
 

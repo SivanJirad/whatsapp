@@ -13,9 +13,6 @@ props.contacts.map((item)=> <ChatItem contact={item}/>)
 
 </div> 
 
-
-
-
         );
 }
 export default ChatList

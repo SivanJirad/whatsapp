@@ -1,40 +1,4 @@
-.center {
-  font-family: Times New Roman;
-  /* text-align: start; */
-  display:block;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: auto;
-  margin-left: auto;
-  /* margin: auto; */
-  width: 40%;
-  /* padding: 60px; */
-  background-color: rgb(248, 249, 250);
+.sign {
+  width: 80%;
+  margin: 0 auto 0 auto;
 }
-
-#logo {
-  height: 100pt;
-  position: relative;
-  top: 34pt;
-  z-index: 2;
-}
-
-.link {
-  margin: 0;
-  text-align: center;
-}
-
-.break_bottun {
-  content: "";
-  margin: 9em;
-  display: block;
-  font-size: 24%;
-}
-
-.break_link {
-  content: "";
-  margin: 18em;
-  display: block;
-  font-size: 24%;
-}
-
