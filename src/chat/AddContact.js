@@ -1,6 +1,7 @@
 import './chat.css'
 import { React, useEffect, useState } from 'react';
 import { contacts } from '../Users';
+import avatar from './avatar.png' 
 
 function ChatItem() {
 
@@ -14,11 +15,14 @@ function ChatItem() {
         }
     
 
-
-
-
-
     return (
+
+        <div className="d-flex align-items-center">
+        <img src={avatar} alt="Avatar" class="avatar"></img>
+        
+        <span className="w-100 m-2 ms-3 nameContact" >Sivan</span> 
+
+   
         <div >
             <i class="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -44,6 +48,11 @@ function ChatItem() {
                     </div> 
                 </div>
             </div>
+        </div>
+        
+
+
+
         </div>
     );
 }

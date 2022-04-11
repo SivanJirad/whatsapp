@@ -7,26 +7,29 @@
 }
 
 .top-row {
-    height: 40px;
+    height: 50px;
     width: 100%;
     background-color: lightgray;
 }
 
 .down-row{
-    /* height: 40px;
-    width: 100%; */
-    background-color: rgb(206, 50, 50);
-    /* position: absolute;
-    bottom: 0; */
-    position: fixed;
-    left: 0;
+    height: 40px;
+    width: 100%; 
+    background-color: lightgray;
+    position: absolute;
     bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
+    left: 0;
 }
 
+#TypingMessage{
+border-radius: 3px;
+height: 70%;
+/* width: 85% */
+/* width: 85%;
+height: 70%;
+padding: 9px 12px 11px;
+margin: 5px 10px */
+}
 .contact{
     height: 80px;
     width: 230px;
@@ -53,7 +56,8 @@
 }
 
 #chats {
-    padding: 0
+    padding: 0;
+    position: relative;
 }
 
 .avatar {
@@ -86,3 +90,15 @@
     left: 31%;
     top: 1%;
 }
+
+.bi-paperclip{
+padding: auto;
+}
+.bi-send{
+    padding: auto;
+
+}
+
+/* .list-group-item{
+    padding: 0;
+} */
