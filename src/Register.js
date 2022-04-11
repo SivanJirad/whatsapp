@@ -124,7 +124,7 @@ function Register() {
                     </table>
                     <input type="file" className="form-control form-control-imag " id="image" name="image" accept="image/png, image/jpeg" onChange={event => setImage(event.target.value)}></input>
 
-                    <button type="submit" id="btn" className="btn btn-primary" onClick={shoot} > Submit</button>
+                    <button type="submit" id="btn" className="btn btn_start btn-primary" onClick={shoot} > Submit</button>
                     <div className="link">
                         Already have an account?&nbsp;
                         <Link to='/'>Log in</Link>

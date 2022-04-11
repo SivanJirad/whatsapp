@@ -44,7 +44,7 @@ function Signin() {
                             <label htmlFor='lname'><i class="bi bi-lock-fill"></i>Password</label>
                         </div>
             
-                        <button type="submit" id="btn" className="btn btn-primary" onClick={goToChatPage} > Login</button>
+                        <button type="submit" id="btn" className="btn btn_start btn-primary" onClick={goToChatPage} > Login</button>
 
                         <div className="link">
                             Don't have an account? Click here to&nbsp;

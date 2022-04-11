@@ -26,8 +26,12 @@ h1 {
 .btn {
   border-radius: 15px;
   width: 100px;
+
+}
+.btn_start {
   margin-top: 30px
 }
+
 
 .center {
   font-family: Times New Roman;

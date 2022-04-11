@@ -62,14 +62,13 @@
 }
 
 .modal-content{
-
-        background: initial;
+        background: #dbccdb;
+        color: black;
 }
 
 .bi-person-plus{
     cursor: pointer;
-text-align: end;
-
+    position: absolute;
+    left: 31%;
+    top: 1%;
 }
-
-
