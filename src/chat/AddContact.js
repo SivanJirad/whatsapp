@@ -17,43 +17,42 @@ function ChatItem() {
 
     return (
 
-        <div className="d-flex align-items-center">
-        <img src={avatar} alt="Avatar" class="avatar"></img>
+        <div  className="top-row list-group-item d-flex align-items-center">
+        <img src={avatar} alt="Avatar" className="avatar"></img>
         
-        <span className="w-100 m-2 ms-3 nameContact" >Sivan</span> 
+        <span className="w-100 m-2 ms-3 nameContact" >sics</span> 
 
    
-        <div >
-            <i class="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Add Contact</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       
+            <i className="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+            <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Add Contact</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <form>
-                                <div class="mb-3">
-                                    <label for="recipient-name" class="col-form-label">Nick Name</label>
-                                    <input type="text" class="form-control" id="recipient-name" onChange={event => setNickName(event.target.value)}></input>
+                                <div className="mb-3">
+                                    <label htmlFor="recipient-name" className="col-form-label">Nick Name</label>
+                                    <input type="text" className="form-control" id="recipient-name" onChange={event => setNickName(event.target.value)}></input>
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary " data-bs-dismiss="modal">Close</button>
                             {/* אין תנאי שבודק את האיש קשר שהוכנס    */}
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick={addContact}>Add</button>
+                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={addContact}>Add</button>
                         </div>
                     </div> 
                 </div>
             </div>
+
         </div>
+
+
         
-
-
-
-        </div>
     );
 }
 

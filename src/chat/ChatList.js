@@ -6,7 +6,7 @@ function ChatList(props){
 
 
 
-<div class="list-group list-group-flush">
+<div className="list-group list-group-flush">
 {
 props.contacts.map((item)=> <ChatItem contact={item}/>)
 }

@@ -18,12 +18,8 @@ function Chat() {
 
         <div className="col-md-4" id="leftMenu">
 
-          <div className="top-row ">
 
             <AddContact/>
-
-
-          </div>
 
           <div className="scroll">
             {<ChatList contacts={contact} />}

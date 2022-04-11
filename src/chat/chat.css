@@ -7,7 +7,7 @@
 }
 
 .top-row {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background-color: lightgray;
 }
@@ -24,11 +24,7 @@
 #TypingMessage{
 border-radius: 3px;
 height: 70%;
-/* width: 85% */
-/* width: 85%;
-height: 70%;
-padding: 9px 12px 11px;
-margin: 5px 10px */
+
 }
 .contact{
     height: 80px;
@@ -86,9 +82,7 @@ margin: 5px 10px */
 
 .bi-person-plus{
     cursor: pointer;
-    position: absolute;
-    left: 31%;
-    top: 1%;
+ 
 }
 
 .bi-paperclip{

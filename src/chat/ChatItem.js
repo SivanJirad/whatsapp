@@ -6,7 +6,7 @@ function ChatItem(props) {
     return (
       
             <button type="button" className="list-group-item list-group-item-action d-flex align-items-center">
-            <img src={avatar} alt="Avatar" class="avatar"></img>
+            <img src={avatar} alt="Avatar" className="avatar"></img>
             
             <span className="w-100 m-2 ms-3 nameContact" >{props.contact.name}</span> 
 
