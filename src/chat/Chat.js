@@ -28,7 +28,7 @@ function Chat() {
         <div className="col-md-8" id="chats">
           <div className="top-row"></div>
           <div>          <SendMassage/>
-</div>
+        </div>
         </div>
       </div>
     </div>

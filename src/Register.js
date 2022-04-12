@@ -73,8 +73,8 @@ function Register() {
     return (
         <div>
 
-            <img id="logo" src={logo}></img>
-            <div className='center shadow-lg p-3 mb-5 bg-white rounded'>
+            <img id="logoR" src={logo}></img>
+            <div className='centerR shadow-lg p-3 mb-5 bg-white rounded'>
 
                 <h1> Registration</h1>
                 <form method='post'>
@@ -97,7 +97,7 @@ function Register() {
                                     <input type="password" className="form-control form-control-register" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}></input>
                                     <label htmlFor="Password"><i className="bi bi-lock-fill"></i>Password</label>
                                         <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
-                                            title="password must be at least 8 charecters,< you must have at least one number and letter"></i>
+                                            title="password must be at least 8 charecters, you must have at least one number and letter"></i>
 
                                     <span id="StrongPass"></span>
 

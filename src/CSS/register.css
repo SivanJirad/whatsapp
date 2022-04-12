@@ -23,3 +23,34 @@
   width: 80%;
   margin: auto
 }
+
+
+#logoR {
+  height: 20%;
+  position: absolute;
+  top: 1.9%;
+  left: 43%;
+  z-index: 2;
+}
+
+
+.centerR {
+  /* height: 72vh; */
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  font-family: Times New Roman;
+  width: 60%;
+  margin: auto;
+  background-color: rgb(248, 249, 250);
+}
+
+.form-floating{
+  width: 95%;
+}
+
+
+.table>:not(caption)>*>* {
+    padding: 0;
+
+}

@@ -24,7 +24,6 @@ h1 {
 .btn {
   border-radius: 15px;
   width: 100px;
-
 }
 .btn_start {
   margin-top: 30px
@@ -44,6 +43,11 @@ h1 {
   top: 34pt;
   z-index: 2;
 }
+
+
+
 .link {
   margin-top: 15px;
+  margin-bottom: 15px;
+
   } 

@@ -7,4 +7,7 @@ export const contacts = [{name:"sivan", massage:"hi"},
 {name:"hila", massage:"hi"},
 {name:"eido", massage:"hi"},
 {name:"mira", massage:"hi"},
+{name:"mira", massage:"hi"},
+{name:"mira", massage:"hi"},
+{name:"mira", massage:"hi"}
 ];
