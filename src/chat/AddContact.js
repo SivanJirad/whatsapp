@@ -1,18 +1,35 @@
 import './chat.css'
 import { React, useEffect, useState } from 'react';
-import { contacts } from '../Users';
+// import { contacts } from '../Users';
 import avatar from './avatar.png' 
+import ChatList from './ChatList';
 
-function ChatItem() {
+function AddContact(props) {
 
+    //const { state } = useLocation();
+
+    // const contact = props.arrayContacts;
+
+    const [contact, setContact] = useState(props.arrayContacts);
 
     const [nickName, setNickName] = useState("");
 
 
     const addContact = function (event) {
         event.preventDefault();
-        contacts.push({nickName: nickName, massage:"g"});
-        }
+        let loadedChannels = []
+        loadedChannels.push({name: nickName, messge:[]})
+        setContact([...loadedChannels]) 
+    }
+
+
+    //const [data, setData] = useState([]);
+
+    // useEffect(() => {
+    //     console.log("somthing happend");
+    // }, [JSON.stringify(contact)]);
+  
+  //  return <DisplayData data={data} />;
     
  
     return (
@@ -44,7 +61,12 @@ function ChatItem() {
                             <button type="button" className="btn btn-secondary " data-bs-dismiss="modal">Close</button>
                             {/* אין תנאי שבודק את האיש קשר שהוכנס    */}
                             <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={addContact}>Add</button>
+                            {/* <div className="scroll">
+                             {<ChatList contacts={contact} />}
+                         </div> */}
                         </div>
+
+                        <h1> {nickName}</h1>
                     </div> 
                 </div>
             </div>
@@ -56,4 +78,7 @@ function ChatItem() {
     );
 }
 
-export default ChatItem
+export default AddContact
+
+
+// event => setContact(contact.push({nickName: nickName, massage:"g"}))
