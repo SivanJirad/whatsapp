@@ -14,7 +14,7 @@ function ChatItem() {
         contacts.push({nickName: nickName, massage:"g"});
         }
     
-
+ 
     return (
 
         <div  className="top-row list-group-item d-flex align-items-center">

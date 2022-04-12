@@ -41,7 +41,7 @@ function Signin() {
                         <div className="form-floating sign">
                             <input type="password" className="form-control" id="pass" name="pass" placeholder="Password"
                              onChange={event => setPassword(event.target.value)}></input>
-                            <label htmlFor='lname'><i class="bi bi-lock-fill"></i>Password</label>
+                            <label htmlFor='lname'><i className="bi bi-lock-fill"></i>Password</label>
                         </div>
             
                         <button type="submit" id="btn" className="btn btn_start btn-primary" onClick={goToChatPage} > Login</button>

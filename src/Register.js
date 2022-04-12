@@ -79,7 +79,7 @@ function Register() {
                 <h1> Registration</h1>
                 <form method='post'>
 
-                    <table class="table table-borderless">
+                    <table className="table table-borderless">
 
                         <tbody>
                             <tr>
@@ -87,7 +87,7 @@ function Register() {
                                     <div className="form-floating form-floating-register">
                                         <input type="text" className="form-control form-control-register" id="username" name="username"
                                             placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
-                                        <label className='string' htmlFor="username"><i class="bi bi-person-fill"></i>
+                                        <label className='string' htmlFor="username"><i className="bi bi-person-fill"></i>
                                             User Name</label>
                                         <span id="userNameValid"></span> <br></br>
                                     </div>
@@ -95,7 +95,7 @@ function Register() {
                                 <td>             
                                     <div className="form-floating">
                                     <input type="password" className="form-control form-control-register" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}></input>
-                                    <label htmlFor="Password"><i class="bi bi-lock-fill"></i>Password</label>
+                                    <label htmlFor="Password"><i className="bi bi-lock-fill"></i>Password</label>
                                         <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="password must be at least 8 charecters,< you must have at least one number and letter"></i>
 
@@ -105,15 +105,15 @@ function Register() {
                             </tr>
                             <tr>
                                 <td><div className="form-floating">
-                                    <input type="text" className="form-control form-control-register" id="username" name="username"
-                                        placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
-                                    <label className='string' htmlFor="username"><i class="bi bi-person-fill"></i>
-                                        User Name</label>
+                                    <input type="text" className="form-control form-control-register" id="NickName" name="username"
+                                        placeholder="NickName" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
+                                    <label className='string' htmlFor="username"><i className="bi bi-person-fill"></i>
+                                    Nick Name</label>
                                     <span id="userNameValid"></span>
                                 </div></td>
                                 <td>    <div className="form-floating">
                                     <input type="password" className="form-control form-control-register" id="checkPass" nume="pass" placeholder="checkPass"></input>
-                                    <label htmlFor="checkPass"><i class="bi bi-lock-fill"></i>
+                                    <label htmlFor="checkPass"><i className="bi bi-lock-fill"></i>
                                         Confirm Password</label>
                                 </div></td>
                             </tr>
