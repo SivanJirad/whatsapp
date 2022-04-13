@@ -1,8 +1,9 @@
 .textBox{
     margin: 30pt;
-    position: bottom;
+}
 
-
+.allChat{
+    overflow: auto;
 }
 
 
@@ -14,13 +15,98 @@
 }
 
 
-.send-message{
+/* :root {
+    --body-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --msger-bg: #fff;
+    --border: 2px solid #ddd;
+    --left-msg-bg: #ececec;
+    --right-msg-bg: #579ffb;
+  }
+
+.msg {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+ 
+  }
+  .msg:last-of-type {
+    margin: 0;
+  }
+  .msg-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background: #ddd;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+  }
+  .msg-bubble {
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 15px;
+    background: var(--left-msg-bg);
+    background-color: #579ffb;
+  }
+  .msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .msg-info-name {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  .msg-info-time {
+    font-size: 0.85em;
+  }
+  
+  .left-msg .msg-bubble {
+    border-bottom-left-radius: 0;
+  }
+  
+  .right-msg {
+    flex-direction: row-reverse;
+  }
+  .right-msg .msg-bubble {
+    background: var(--right-msg-bg);
+    color: #fff;
+    border-bottom-right-radius: 0;
+  }
+  .right-msg .msg-img {
+    margin: 0 0 0 10px;
+  } */
+
+/* 
+  .u1{
+    float: left;
+    clear: both;
+    border-top-left-radius: 10px;
+}
+.u1:before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid #72b8ff;
+    border-top: 5px solid #72b8ff;
+    border-bottom: 5px solid transparent;
+    position: absolute;
+    top: 0px;
+    left: -10px;
+} */
+
+
+/* .send-message{
     /* position: absolute;
     right: 0; */
-    border-radius: 10px;
+    /* border-radius: 10px;
     margin: 30px;
 
-}
+} */ 
 
 
 /* .text-message {
@@ -33,10 +119,12 @@
 
 
 .message-scroll{
-    display: flex;
-    flex-direction: column;
-    height: 90vh;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    height: 75vh;
 }
+
+
 
 
 

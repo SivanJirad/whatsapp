@@ -6,12 +6,14 @@ import { useState, useEffect } from 'react';
 // export let userChatPrassed = null
 
 function ChatItem(props) {
+
+
+    const {contact} = props
     
 
     const goToMethod = function(){
         console.log("im in")
-        props.setUser({userName: props.contact.userName , messages: props.contact.messages});
-        // console.log(userChatPrassed)
+        props.setUser({userName: contact.userName , messages: contact.messages});
         // props.contact.message.map((item)=> <SendMessage></SendMessage>)
     }
 
