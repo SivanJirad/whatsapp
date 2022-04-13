@@ -4,20 +4,17 @@ import {useEffect, useState} from 'react';
 import AddContact from './AddContact'
 import SendMessage from "./SendMessage";
 import './chat.css'
-import ChatItem, {userChatPrassed} from './ChatItem'
+import UserTextBox from './UserTextBox'
 
 
 function Chat() {
   const { state } = useLocation();
 
-  // useEffect(() => {
-  //   console.log(userChatPrassed)
-  //   userChatPrassed !== null &&  <SendMessage/>
-  // }, [userChatPrassed]);
 
-  // let [contact, setContact] = useState(state.contacts);
+  const [userChatPrassed, setUserChatPrassed] = useState(null);
 
-  console.log(ChatItem.userChatPrassed)
+console.log(state.contacts)
+
   return (
     <div className="container center-chats">
       <div className="row">
@@ -28,15 +25,14 @@ function Chat() {
             {/* <AddContact arrayContacts={state.contacts}/> */}
 
           <div className="scroll">
-            {<ChatList contacts={state.contacts} />}
+            {<ChatList contacts={state.contacts} setUser={setUserChatPrassed} />}
           </div>
         </div>  
         <div className="col-md-8" id="chats">
-          <div className="top-row">
+        { userChatPrassed !== null && <UserTextBox item={userChatPrassed}/>}       
 
-       </div>
+        {userChatPrassed !== null && <div className="top-row"></div>}
           <div>   
-          { ChatItem.userChatPrassed !== null && <SendMessage item={ChatItem.userChatPrassed} />}       
         </div>
         </div>
       </div>
