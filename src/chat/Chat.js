@@ -25,11 +25,12 @@ console.log(state.contacts)
             {/* <AddContact arrayContacts={state.contacts}/> */}
 
           <div className="scroll">
-            {<ChatList contacts={state.contacts} setUser={setUserChatPrassed} />}
+            {<ChatList contacts={state.contacts} setUser={setUserChatPrassed} userName={state.userName}/>}
           </div>
         </div>  
         <div className="col-md-8" id="chats">
-        { userChatPrassed !== null && <UserTextBox item={userChatPrassed}/>}       
+        { userChatPrassed !== null && <UserTextBox item={userChatPrassed} userName={state.userName}/>}       
+        {console.log(userChatPrassed)}
 
         {userChatPrassed !== null && <div className="top-row"></div>}
           <div>   
@@ -40,4 +41,3 @@ console.log(state.contacts)
   );
 }
 export default Chat
-

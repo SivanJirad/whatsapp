@@ -65,10 +65,9 @@ function Register() {
             alert('Password is not matching');
         }
         else {
-            const arr = []
-            arr.push.apply(arr, contacts)
+            const arr = [...contacts]
             users.push({ userName: userName, nickName: nickName, image: image, password: password, contacts: arr });
-            navigate('/chats', { state: { userName: userName, nickName: nickName, image: image, password: password, contacts: arr } });
+            navigate('/chats', { state: users[users.length-1] });
         }
     }
 

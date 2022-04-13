@@ -1,35 +1,28 @@
 import './chat.css'
-import { React, useEffect, useState } from 'react';
-// import { contacts } from '../Users';
+import { React, useEffect, useRef, useState } from 'react';
+import { users } from '../Users';
 import avatar from './avatar.png' 
 import ChatList from './ChatList';
 
 function AddContact(props) {
 
-    //const { state } = useLocation();
-
-    // const contact = props.arrayContacts;
-
-    const [contact, setContact] = useState(props.arrayContacts);
-
-    const [nickName, setNickName] = useState("");
+    let name = useRef();
 
 
     const addContact = function (event) {
-        event.preventDefault();
-        let loadedChannels = []
-        loadedChannels.push({name: nickName, messge:[]})
-        setContact([...loadedChannels]) 
+
+        
+
+        let contName = name.current.value;
+
+
+        props.setContact((prev)=>{
+            return prev.concat({userName: contName, messages:[]})
+        })
+
+        name.current.value = ''
+
     }
-
-
-    //const [data, setData] = useState([]);
-
-    // useEffect(() => {
-    //     console.log("somthing happend");
-    // }, [JSON.stringify(contact)]);
-  
-  //  return <DisplayData data={data} />;
     
  
     return (
@@ -37,7 +30,7 @@ function AddContact(props) {
         <div  className="top-row list-group-item d-flex align-items-center">
         <img src={avatar} alt="Avatar" className="avatar"></img>
         
-        <span className="w-100 m-2 ms-3 nameContact" >sics</span> 
+        <span className="w-100 m-2 ms-3 nameContact" >{props.userName}</span> 
 
    
        
@@ -52,8 +45,8 @@ function AddContact(props) {
                         <div className="modal-body">
                             <form>
                                 <div className="mb-3">
-                                    <label htmlFor="recipient-name" className="col-form-label">Nick Name</label>
-                                    <input type="text" className="form-control" id="recipient-name" onChange={event => setNickName(event.target.value)}></input>
+                                    <label htmlFor="recipient-name" className="col-form-label">Enter User Name</label>
+                                    <input type="text" className="form-control" id="recipient-name" ref={name}></input>
                                 </div>
                             </form>
                         </div>
@@ -65,8 +58,6 @@ function AddContact(props) {
                              {<ChatList contacts={contact} />}
                          </div> */}
                         </div>
-
-                        <h1> {nickName}</h1>
                     </div> 
                 </div>
             </div>
@@ -80,5 +71,3 @@ function AddContact(props) {
 
 export default AddContact
 
-
-// event => setContact(contact.push({nickName: nickName, massage:"g"}))

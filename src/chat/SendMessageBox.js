@@ -1,4 +1,6 @@
+
 import './message.css'
+import avatar from './avatar.png' 
 
 
 function SendMessageBox(props) {
@@ -6,8 +8,10 @@ function SendMessageBox(props) {
     return(
         
         <div className="textBox">
-            <span className="alert alert-success send-message"> {props.item}</span>
-        </div>
+            <span className="alert alert-success recieve-message"> {props.item}</span>
+    </div>
+
+
     );
 
 
