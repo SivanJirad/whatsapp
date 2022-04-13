@@ -1,6 +1,6 @@
 import { Redirect, Link, useNavigate } from 'react-router-dom'
 import { React, useEffect, useState } from 'react';
-import { users } from './Users';
+import { contacts, users } from './Users';
 import logo from './wenLogo.jpg'
 import './CSS/sign.css'
 import './CSS/project.css'
@@ -15,13 +15,13 @@ function Signin() {
         event.preventDefault();
         let transfer = false;
         for (let i = 0; i < users.length; i++) {
-            if (users[i].name == userName && users[i].password == password) {
-                navigate('/chats')
+            if (users[i].userName == userName && users[i].password == password) {
+                navigate('/chats', { state: { userName: users[i].userName, nickName: users[i].nickName, image: users[i].image, password: users[i].password, contacts: users[i].contacts } });
                 transfer = true
             }
         }
         if (!transfer)
-            alert('user or password are incorrect')
+            alert('user name or password are incorrect')
     }
 
 

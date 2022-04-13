@@ -1,0 +1,42 @@
+.textBox{
+    margin: 30pt;
+    position: bottom;
+
+
+}
+
+
+.recieve-message{
+    /* position: absolute;
+    left: 0; */
+    border-radius: 10px;
+    margin: 30px;
+}
+
+
+.send-message{
+    /* position: absolute;
+    right: 0; */
+    border-radius: 10px;
+    margin: 30px;
+
+}
+
+
+/* .text-message {
+    position: right;
+    position: relative;
+    bottom: 10%;
+    text-align: left;
+    border-radius: 10px;
+} */
+
+
+.message-scroll{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+
+

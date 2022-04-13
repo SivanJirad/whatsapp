@@ -9,23 +9,14 @@ function ChatList(props){
     
     const [contacts, setContact] = useState(props.contacts);
 
-    const [nickName, setNickName] = useState("");
+    const [userName, setUserName] = useState("");
 
 
     const addContact = function (event) {
         event.preventDefault();
-        let loadedChannels = []
-        loadedChannels.push({name: nickName, message:[]})
-        setContact([...contacts, {name: nickName, message:[]}])
+ 
+        setContact([...contacts, {userName: userName, messages:[]}])
     }
-
-
-    // useEffect(() => {
-
-    //     contact.map((item)=> <ChatItem contact={item}/>)
-    // }, [contact]);
-
-
 
 
 
@@ -49,7 +40,7 @@ function ChatList(props){
                             <form>
                                 <div className="mb-3">
                                     <label htmlFor="recipient-name" className="col-form-label">User Name</label>
-                                    <input type="text" className="form-control" id="recipient-name" onChange={event => setNickName(event.target.value)}></input>
+                                    <input type="text" className="form-control" id="recipient-name" onChange={event => setUserName(event.target.value)}></input>
                                 </div>
                             </form>
                         </div>
@@ -64,7 +55,7 @@ function ChatList(props){
 
         </div>
         <div className="list-group list-group-flush">
-            { contacts.map((item)=> <ChatItem contact={item}/>) }
+            { contacts.map((item)=> <ChatItem contact={item} setUser={props.setUser}/>) }
         </div> 
 
         </div>
