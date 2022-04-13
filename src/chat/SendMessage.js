@@ -55,7 +55,7 @@ function SendMessage(props){
 
   <input type="text" id='TypingMessage' className="form-control shadow-none m-4 ms-3" placeholder="Typing a message" aria-label="Typing a message" 
   ref={input} onKeyDown= {checkIfEnter}></input>
-  <bottun type="submit" onClick={setNewMessage}  > <i className="bi bi-send"  ></i> </bottun>
+  <button type="submit" onClick={setNewMessage}  > <i className="bi bi-send"  ></i> </button>
 
 
 </div>

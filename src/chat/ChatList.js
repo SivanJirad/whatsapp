@@ -7,9 +7,9 @@ import AddContact from "./AddContact";
 function ChatList(props){
 
     
-    const [contacts, setContact] = useState(props.contacts);
+    // const [contacts, setContact] = useState(props.contacts);
 
-    const [userName, setUserName] = useState("");
+    // const [userName, setUserName] = useState("");
 
 
     // const addContact = function (event) {
@@ -25,12 +25,12 @@ function ChatList(props){
 
         <div>
 
-        <div>
+        {/* <div>
             <AddContact setContact={setContact} userName={props.userName}/>
 
-        </div>
+        </div> */}
         <div className="list-group list-group-flush">
-            { contacts.map((item)=> <ChatItem contact={item} setUser={props.setUser}/>) }
+            { props.contacts.map((item)=> <ChatItem contact={item} setUser={props.setUser}/>) }
         </div> 
 
         </div>

@@ -10,6 +10,7 @@ import UserTextBox from './UserTextBox'
 function Chat() {
   const { state } = useLocation();
 
+  let [contact, setContact] = useState(state.contacts);
 
   const [userChatPrassed, setUserChatPrassed] = useState(null);
 
@@ -22,10 +23,10 @@ console.log(state.contacts)
         <div className="col-md-4" id="leftMenu">
 
 
-            {/* <AddContact arrayContacts={state.contacts}/> */}
+        <AddContact setContact={setContact} userName={state.userName}/>
 
           <div className="scroll">
-            {<ChatList contacts={state.contacts} setUser={setUserChatPrassed} userName={state.userName}/>}
+            {<ChatList contacts={contact} setUser={setUserChatPrassed} userName={state.userName}/>}
           </div>
         </div>  
         <div className="col-md-8" id="chats">
