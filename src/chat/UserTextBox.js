@@ -20,13 +20,11 @@ function UserTextBox(props){
     
         </div>
         <div className="message-scroll">
-          {/* {console.log(props.messages)} */}
         { props.messages.map((item)=> item.sentByMe ? <SendMessageBox item={item.message}/> : <RecieveMessageBox item={item.message}/> )}
         </div>
-    
         
         <div>
-        {<SendMessage setMessage={props.setMessages} myUser={props.userName} chatUser={props.item.userName} userChatPrassed = {props.item} messages = {props.messages} contact = {props.contact} arrContact = {props.arrContact}/>}
+        {<SendMessage arrContactMessage={props.arrContactMessage} setMessage={props.setMessages} myUser={props.userName} chatUser={props.item.userName} arrContact = {props.arrContact}/>}
         
 
         </div>

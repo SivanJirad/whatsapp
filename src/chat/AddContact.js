@@ -8,14 +8,32 @@ function AddContact(props) {
 
     let name = useRef();
 
-
     const addContact = function (event) {
         let contName = name.current.value;
+        name.current.value = ''
+
+console.log(users.findIndex(x => (x.userName === contName)))
+        if (users.findIndex(x => (x.userName === contName)) === -1) {
+            alert("This user does nor exist!")
+        }
+
+        else if( props.existContacts.findIndex(x => (x.userName === contName)) !== -1)
+        {
+            alert("You can't add someone who is allready your contact")
+        }
+        else{
         props.setContact((prev)=>{
             return prev.concat({userName: contName, messages:[]})
         })
+        users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, messages:[]}]
+    }
             // console.log(contName)
-        name.current.value = ''
+    }
+
+
+    const checkIfEnter = function(event){
+        if(event.key === 'Enter')
+          addContact();
     }
     
  
@@ -40,7 +58,7 @@ function AddContact(props) {
                             <form>
                                 <div className="mb-3">
                                     <label htmlFor="recipient-name" className="col-form-label">Enter User Name</label>
-                                    <input type="text" className="form-control" id="recipient-name" ref={name}></input>
+                                    <input type="text" className="form-control" id="recipient-name" ref={name} onKeyDown={checkIfEnter}></input>
                                 </div>
                             </form>
                         </div>
@@ -48,9 +66,7 @@ function AddContact(props) {
                             <button type="button" className="btn btn-secondary " data-bs-dismiss="modal">Close</button>
                             {/* אין תנאי שבודק את האיש קשר שהוכנס    */}
                             <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={addContact}>Add</button>
-                            {/* <div className="scroll">
-                             {<ChatList contacts={contact} />}
-                         </div> */}
+
                         </div>
                     </div> 
                 </div>
