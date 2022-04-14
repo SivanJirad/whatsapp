@@ -6,7 +6,7 @@ function AttachAudio(props){
   
     return(
         <div>
-        <div><i className ="bi bi-image attchment-icon"></i></div>
+<i class="bi bi-mic attchment-icon"></i>
 
 
         </div>

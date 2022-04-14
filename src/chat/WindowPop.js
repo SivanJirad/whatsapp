@@ -23,8 +23,6 @@ function WindowPop(props){
 <OverlayTrigger trigger="click" placement="top" overlay={popoverTop} rootClose>
       <Button> <i className="bi bi-paperclip"></i></Button>
     </OverlayTrigger>
-
-
       </div>
 
         );

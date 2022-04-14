@@ -9,7 +9,7 @@ function AttachViedo(props){
 
     return(
         <div>
-        <div><i className="bi bi-mic attchment-icon"></i></div>
+<i class="bi bi-camera-reels attchment-icon"></i>
 
 
         </div>
