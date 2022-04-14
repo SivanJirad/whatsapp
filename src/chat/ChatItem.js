@@ -2,22 +2,31 @@ import './chat.css'
 import avatar from './avatar.png' 
 import SendMessage from "./SendMessage";
 import { useState, useEffect } from 'react';
-
+import {users} from '../Users'
 // export let userChatPrassed = null
 
 function ChatItem(props) {
 
 
-    const {contact} = props
+    // const {contact} = props
     
 
     const goToMethod = function(){
-        console.log("im in")
-        props.setUser({userName: contact.userName , messages: contact.messages});
+        props.setMessages(props.contact.messages);
+        props.setUser({userName: props.contact.userName , messages: props.contact.messages});
+
+        // props.setUser({userName: props.contact.userName , messages: props.setMessages(props.contact.messages)});
+
+        //לחיצה על כפתור הצאט
+        console.log(props.contact)
+
+        
+        // console.log("chat item:" + contact.messages)
+
         // props.contact.message.map((item)=> <SendMessage></SendMessage>)
     }
 
-    console.log(props)
+    // console.log(props)
 
 
     return (

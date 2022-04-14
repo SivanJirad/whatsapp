@@ -9,9 +9,7 @@ function SendMessageBox(props) {
         
         <div className="textBox">
             <span className="alert alert-success recieve-message"> {props.item}</span>
-    </div>
-
-
+              </div>
     );
 
 
