@@ -12,7 +12,11 @@ function ChatItem(props) {
     
 
     const goToMethod = function(){
-        props.setUser({userName: props.contact.userName , messages: props.setMessages(props.contact.messages)});
+        props.setMessages(props.contact.messages);
+        props.setUser({userName: props.contact.userName , messages: props.contact.messages});
+
+        // props.setUser({userName: props.contact.userName , messages: props.setMessages(props.contact.messages)});
+
         //לחיצה על כפתור הצאט
         console.log(props.contact)
 
