@@ -11,7 +11,9 @@ function SendMessage(props){
       let mes= input.current.value
       input.current.value = ''
       let index1 = props.arrContact.findIndex(x => (x.userName === props.chatUser))
-      props.arrContact[index1].messages.push({message: mes , sentByMe: true});
+
+      props.arrContact[index1].messages = [...props.arrContact[index1].messages,  {message: mes , sentByMe: true}]
+
       props.setMessage((prev)=>{
        return prev.concat({message: mes, sentByMe:true})
       }
