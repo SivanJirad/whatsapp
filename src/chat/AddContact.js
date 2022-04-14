@@ -14,7 +14,7 @@ function AddContact(props) {
         props.setContact((prev)=>{
             return prev.concat({userName: contName, messages:[]})
         })
-            console.log(contName)
+            // console.log(contName)
         name.current.value = ''
     }
     

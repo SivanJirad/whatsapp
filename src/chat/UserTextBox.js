@@ -8,23 +8,9 @@ import { useEffect, useState } from "react";
 
 
 function UserTextBox(props){
-
-
-    useEffect(() => {
-        // Update the document title using the browser API
-        setMessage(props.item.messages)
-      }, [props.item.messages]);
-
-
-
-    const [messages, setMessage] = useState(props.item.messages)
-
-    // useEffect(() => {
-    //     // Update the document title using the browser API
-    //     props.item.messages = messages
-    //   }, [messages]);
     
-      console.log(props.item)
+
+    
     return(
         <div>
 
@@ -34,13 +20,15 @@ function UserTextBox(props){
     
         </div>
         <div className="message-scroll">
-        { messages.map((item)=> item.sentByMe ? <SendMessageBox item={item.message}/> : <RecieveMessageBox item={item.message}/> )}
+          {/* {console.log(props.messages)} */}
+        { props.messages.map((item)=> item.sentByMe ? <SendMessageBox item={item.message}/> : <RecieveMessageBox item={item.message}/> )}
         </div>
     
         
         <div>
-        {<SendMessage setMessage={setMessage} myUser={props.userName} chatUser={props.item.userName} messages={messages} />}
-    
+        {<SendMessage setMessage={props.setMessages} myUser={props.userName} chatUser={props.item.userName} userChatPrassed = {props.item} messages = {props.messages} contact = {props.contact} arrContact = {props.arrContact}/>}
+        
+
         </div>
     
         </div>

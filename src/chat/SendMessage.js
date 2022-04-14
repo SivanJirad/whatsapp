@@ -10,37 +10,17 @@ function SendMessage(props){
   const setNewMessage= function(){
       let mes= input.current.value
       input.current.value = ''
-
-
-      //props.messages.concat({message: mes, sentByMe:false})
-      //return [...props.messages, {message: mes, sentByMe:true}]
-      props.setMessage((prev)=>{return prev.concat({message: mes, sentByMe:true})})
-
-
-      //props.setMessage( prev => {return [...prev, {message: mes, sentByMe:true}]})
-      // props.setMessageReciever((prev)=>{return prev.concat({message: mes, sentByMe:false})})
-
-   
-
-      // for( let i=0; i<users.length; i++){
-      //     if(users[i] === props.userName){
-      //       for(let j=0 ; j< users[i].contacts.length; j++){
-      //         if(users[i].contacts[j].userName === props.myUser){
-      //           users[i].contacts[j].messages.push({message: mes, sentByMe:true})
-      //         }
-      //       }
-      //     }
-      // }
-
-      console.log(users)
+      let index1 = props.arrContact.findIndex(x => (x.userName === props.chatUser))
+      props.arrContact[index1].messages.push({message: mes , sentByMe: true});
+      props.setMessage((prev)=>{
+       return prev.concat({message: mes, sentByMe:true})
+      }
+       )
+    }
 
 
 
 
-     // users.map((item)=> item.userName == props.myUser ? 
-
-
-  }
 
   const checkIfEnter = function(event){
       if(event.key === 'Enter')

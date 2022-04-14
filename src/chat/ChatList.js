@@ -6,34 +6,13 @@ import AddContact from "./AddContact";
 
 function ChatList(props){
 
-    
-    // const [contacts, setContact] = useState(props.contacts);
-
-    // const [userName, setUserName] = useState("");
-
-
-    // const addContact = function (event) {
-    //     event.preventDefault();
-        
-    //     setContact([...contacts, {userName: userName, messages:[]}])
-    // }
-
-
-
-
     return(
 
-        <div>
 
-        {/* <div>
-            <AddContact setContact={setContact} userName={props.userName}/>
-
-        </div> */}
         <div className="list-group list-group-flush">
-            { props.contacts.map((item)=> <ChatItem contact={item} setUser={props.setUser}/>) }
+            { props.contacts.map((item)=> <ChatItem contact={item} setUser={props.setUser} setMessages = {props.setMessages}/>) }
         </div> 
 
-        </div>
         );
 }
 export default ChatList

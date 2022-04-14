@@ -18,9 +18,9 @@ export const users = [
 {userName: "Keran Peles" , nickName: "keran" , image: null, password: "keran666", contacts: [...contacts] }
 ];
 
-delete users[0].contacts[0]
-delete users[1].contacts[1]
-delete users[2].contacts[2]
-delete users[3].contacts[3]
-delete users[4].contacts[4]
+// delete users[0].contacts[0]
+// delete users[1].contacts[1]
+// delete users[2].contacts[2]
+// delete users[3].contacts[3]
+// delete users[4].contacts[4]
 
