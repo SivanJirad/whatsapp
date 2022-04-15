@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 // sent = true means the message was sent by the current user, false means he recieved it
-export const contacts = [{userName:"Sivan Jhirad", messages:[{message:"hi sivan", sentByMe:true},  {message:"hello", sentByMe:false}] },
-{userName:"Ofri Zangi" ,messages:[{message:"hi ofri", sentByMe:true},  {message:"hello", sentByMe:false}] },
-{userName:"Eden Ben Zaken", messages:[{message:"hi eden", sentByMe:true},  {message:"hello", sentByMe:false}]},
-{userName:"Hanan Ben Ari", messages:[{message:"hi hanani", sentByMe:true},  {message:"hello", sentByMe:false}]},
-{userName:"Keran Peles", messages:[{message:"hi keran", sentByMe:true},  {message:"hello", sentByMe:false}]}
+export const contacts = [{userName:"Sivan Jhirad", messages:[{message:"hi sivan", sentByMe:true, type: 'text'},  {message:"hello", sentByMe:false, type: 'text'}] },
+{userName:"Ofri Zangi" ,messages:[{message:"hi ofri", sentByMe:true, type: 'text'},  {message:"hello", sentByMe:false, type: 'text'}] },
+{userName:"Eden Ben Zaken", messages:[{message:"hi eden", sentByMe:true, type: 'text'},  {message:"hello", sentByMe:false, type: 'text'}]},
+{userName:"Hanan Ben Ari", messages:[{message:"hi hanani", sentByMe:true, type: 'text'},  {message:"hello", sentByMe:false, type: 'text'}]},
+{userName:"Keran Peles", messages:[{message:"hi keran", sentByMe:true, type: 'text'},  {message:"hello", sentByMe:false, type: 'text'}]}
 ];
 
 
@@ -33,4 +33,12 @@ export const users = [
 // delete users[2].contacts[2]
 // delete users[3].contacts[3]
 // delete users[4].contacts[4]
+
+
+
+var list = ["bar", "baz", "foo", "qux"];
+    
+list.splice(0, 2); 
+
+console.log(list.splice(0, 2))
 
