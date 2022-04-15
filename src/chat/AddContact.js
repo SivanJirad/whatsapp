@@ -12,7 +12,6 @@ function AddContact(props) {
         let contName = name.current.value;
         name.current.value = ''
 
-console.log(users.findIndex(x => (x.userName === contName)))
         if (users.findIndex(x => (x.userName === contName)) === -1) {
             alert("This user does nor exist!")
         }
@@ -27,7 +26,6 @@ console.log(users.findIndex(x => (x.userName === contName)))
         })
         users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, messages:[]}]
     }
-            // console.log(contName)
     }
 
 
@@ -40,8 +38,8 @@ console.log(users.findIndex(x => (x.userName === contName)))
     return (
 
         <div  className="top-row list-group-item d-flex align-items-center">
-        <img src={avatar} alt="Avatar" className="avatar"></img>
-        
+        <img src={props.image} className="avatar"></img>
+        {console.log(props.image)}   
         <span className="w-100 m-2 ms-3 nameContact" >{props.userName}</span> 
 
    

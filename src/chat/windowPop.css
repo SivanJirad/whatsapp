@@ -1,8 +1,23 @@
 .attchment-icon{
 font-size: xx-large;
+cursor: pointer
+
 }
 
 .popover{
     background-color: transparent;
     border-color: transparent;
 }
+
+.bi-paperclip {
+    font-size: x-large;
+    cursor: pointer
+}
+
+/* .bs-popover-auto[data-popper-placement^=top]>.popover-arrow, .bs-popover-top>.popover-arrow {
+    bottom: calc(null)
+} */
+
+.chooseImage{
+    display: none;
+} 

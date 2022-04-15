@@ -5,6 +5,10 @@ import "./CSS/register.css";
 import logo from './wenLogo.jpg'
 import Chat from './chat/Chat';
 import "./CSS/project.css";
+import { upload } from '@testing-library/user-event/dist/upload';
+import avatar from './chat/avatar.png' 
+import { propTypes } from 'react-bootstrap/esm/Image';
+
 
 
 
@@ -12,7 +16,7 @@ function Register() {
 
     const [userName, setUserName] = useState("");
     const [nickName, setNickName] = useState("");
-    const [image, setImage] = useState("");
+    const [image, setImage] = useState(avatar);
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
@@ -67,9 +71,24 @@ function Register() {
         else {
             const arr = [...contacts]
             users.push({ userName: userName, nickName: nickName, image: image, password: password, contacts: arr });
-            navigate('/chats', { state: users.length-1});
+
+            navigate('/chats', { state: users.length - 1 });
         }
     }
+
+
+
+
+    const uploadImage = (event) => {
+            let value = URL.createObjectURL(event.target.files[0]);
+
+            setImage(value);
+
+
+        };
+
+
+
 
     return (
         <div>
@@ -93,14 +112,14 @@ function Register() {
                                         <span id="userNameValid"></span> <br></br>
                                     </div>
                                 </td>
-                                <td>             
+                                <td>
                                     <div className="form-floating">
-                                    <input type="password" className="form-control form-control-register" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}></input>
-                                    <label htmlFor="Password"><i className="bi bi-lock-fill"></i>Password</label>
+                                        <input type="password" className="form-control form-control-register" id="Password" name="pass" placeholder="Password" onInput={checkPass2} onChange={event => setPassword(event.target.value)}></input>
+                                        <label htmlFor="Password"><i className="bi bi-lock-fill"></i>Password</label>
                                         <i className="bi-info-circle" data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="password must be at least 8 charecters, you must have at least one number and letter"></i>
 
-                                    <span id="StrongPass"></span>
+                                        <span id="StrongPass"></span>
 
                                     </div></td>
                             </tr>
@@ -109,7 +128,7 @@ function Register() {
                                     <input type="text" className="form-control form-control-register" id="NickName" name="username"
                                         placeholder="NickName" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
                                     <label className='string' htmlFor="username"><i className="bi bi-person-fill"></i>
-                                    Nick Name</label>
+                                        Nick Name</label>
                                     <span id="userNameValid"></span>
                                 </div></td>
                                 <td>    <div className="form-floating">
@@ -118,12 +137,12 @@ function Register() {
                                         Confirm Password</label>
                                 </div></td>
                             </tr>
-                            
-                     
+
+
 
                         </tbody>
                     </table>
-                    <input type="file" className="form-control form-control-imag " id="image" name="image" accept="image/png, image/jpeg" onChange={event => setImage(event.target.value)}></input>
+                    <input type="file" className="form-control form-control-imag " id="image" name="image" accept="image/png, image/jpeg" onChange={uploadImage}></input>
 
                     <button type="submit" id="btn" className="btn btn_start btn-primary" onClick={shoot} > Submit</button>
                     <div className="link">

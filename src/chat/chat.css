@@ -117,3 +117,11 @@ padding: auto;
 /* .container{
     height: 100%;
 } */
+
+.bi-send {
+    font-size: x-large;
+    cursor: pointer
+}
+
+
+
