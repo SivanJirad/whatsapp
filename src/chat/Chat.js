@@ -10,8 +10,8 @@ import {users} from '../Users'
 
 function Chat() {
   const { state } = useLocation();
-
-  let user = users[state];
+  console.log(state.index)
+  let user = users[state.index];
   let [contact, setContact] = useState(user.contacts);
   const [messages, setMessage] = useState([])
   const [userChatPrassed, setUserChatPrassed] = useState(null);

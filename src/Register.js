@@ -71,8 +71,7 @@ function Register() {
         else {
             const arr = [...contacts]
             users.push({ userName: userName, nickName: nickName, image: image, password: password, contacts: arr });
-
-            navigate('/chats', { state: users.length - 1 });
+            navigate('/chats',  { state:{index:users.length - 1}});
         }
     }
 
