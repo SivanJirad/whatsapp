@@ -10,7 +10,8 @@ function SendMessage(props) {
   const uploadText = (event) => {
     let mes = input.current.value
     input.current.value = ''
-    setNewMessage("text", mes)
+    if (mes!=""){
+    setNewMessage("text", mes)}
   }
 
   const setNewMessage = function (type, mes) {
