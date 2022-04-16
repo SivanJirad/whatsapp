@@ -13,7 +13,7 @@ function ChatItem(props) {
 
     const goToMethod = function(){
         props.setMessages(props.contact.messages);
-        props.setUser({userName: props.contact.userName , messages: props.contact.messages});
+        props.setUser({userName: props.contact.userName, image: props.contact.image, messages: props.contact.messages});
 
     }
 
@@ -21,7 +21,7 @@ function ChatItem(props) {
         
       
             <button type="button" className="list-group-item list-group-item-action d-flex align-items-center" onClick={goToMethod}>
-            <img src={avatar} alt="Avatar" className="avatar"></img>
+            <img src={props.contact.image} alt="Avatar" className="avatar"></img>
             
             <span className="w-100 m-2 ms-3 nameContact" >{props.contact.userName}</span> 
             
