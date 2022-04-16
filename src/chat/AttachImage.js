@@ -8,22 +8,15 @@ import React, { Component } from 'react';
 function AttachImage(props) {
 
     let imageInput = useRef();
-    let value;
 
     const uploadImage = (event) => {
         imageInput.current.click(event);
-
     }
 
     const send = (event) => {
-        value = URL.createObjectURL(event.target.files[0]);
-        let index1 = props.arrContact.findIndex(x => (x.userName === props.chatUser))
-            props.arrContact[index1].messages = [...props.arrContact[index1].messages,  {message: value , sentByMe: true, type: 'image'}]
-            props.arrContactMessage.messages = [...props.arrContactMessage.messages,  {message: value , sentByMe: false, type: 'image'}]
-            props.setMessage((prev)=>{
-             return prev.concat({message: value, sentByMe:true , type: 'image'})
-            }
-             )
+       let value = URL.createObjectURL(event.target.files[0]);
+        props.setNewMessage("image", value)
+
     };
 
     return (

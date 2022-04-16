@@ -12,8 +12,12 @@ function MessageBox(props) {
                 return <span className={className}>{props.item.message}</span>
             }
             else if (props.item.type == 'image') {
-                return <span className={className}>{<img src={props.item.message} className="sizeImage"></img>}</span>
+                return <span className={className}><img src={props.item.message} className="sizeImage"></img></span>
             }
+            else if (props.item.type == 'video') {
+                return <span className={className}><video controls src={props.item.message} className="sizeImage"></video></span>
+            }
+            
         }
 
     return (

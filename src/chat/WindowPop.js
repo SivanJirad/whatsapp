@@ -8,9 +8,9 @@ function WindowPop(props){
 
     const popoverTop = (
       <Popover id="popover-positioned-top" title="Popover top">
-                <AttachImage setMessage = {props.setMessage} arrContactMessage={props.arrContactMessage} chatUser={props.chatUser} arrContact = {props.arrContact}/>
+                <AttachImage setNewMessage={props.setNewMessage}/>
 
-       <AttachVideo/>
+       <AttachVideo setNewMessage={props.setNewMessage}/>
         <AttachAudio/>
 
       </Popover>
