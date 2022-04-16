@@ -17,9 +17,7 @@ function AttachImage(props) {
 
     const send = (event) => {
         value = URL.createObjectURL(event.target.files[0]);
-        console.log(value)
         let index1 = props.arrContact.findIndex(x => (x.userName === props.chatUser))
-            // <img src={image} className="masage-image"></img>
             props.arrContact[index1].messages = [...props.arrContact[index1].messages,  {message: value , sentByMe: true, type: 'image'}]
             props.arrContactMessage.messages = [...props.arrContactMessage.messages,  {message: value , sentByMe: false, type: 'image'}]
             props.setMessage((prev)=>{

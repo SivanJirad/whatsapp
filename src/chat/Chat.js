@@ -10,16 +10,10 @@ import {users} from '../Users'
 
 function Chat() {
   const { state } = useLocation();
-  console.log(state.index)
   let user = users[state.index];
   let [contact, setContact] = useState(user.contacts);
   const [messages, setMessage] = useState([])
   const [userChatPrassed, setUserChatPrassed] = useState(null);
-
-  // props.setUser({userName: contact.userName , messages: contact.messages});
-
-// console.log(state.contacts)
-
 
   const getArrOfUserContact = function(){
     

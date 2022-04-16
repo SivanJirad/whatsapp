@@ -18,7 +18,6 @@ function Signin() {
         for (let i = 0; i < users.length; i++) {
             if (users[i].userName === userName && users[i].password === password) {
                 navigate('/chats', { state:{index:i}});
-                console.log(i+1)
                 transfer = true
             }
         }

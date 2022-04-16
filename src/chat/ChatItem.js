@@ -15,19 +15,7 @@ function ChatItem(props) {
         props.setMessages(props.contact.messages);
         props.setUser({userName: props.contact.userName , messages: props.contact.messages});
 
-        // props.setUser({userName: props.contact.userName , messages: props.setMessages(props.contact.messages)});
-
-        //לחיצה על כפתור הצאט
-        console.log(props.contact)
-
-        
-        // console.log("chat item:" + contact.messages)
-
-        // props.contact.message.map((item)=> <SendMessage></SendMessage>)
     }
-
-    // console.log(props)
-
 
     return (
         

@@ -26,7 +26,7 @@ export const contacts = [{userName:"Sivan Jhirad", messages:[{message:"hi sivan"
     
     
     export const users = [
-        {userName: "Sivan Jhirad" , nickName: "sivani" , image: null, password: "1234567a", contacts: [...contacts]},
+        {userName: "Sivan Jhirad" , nickName: "sivani" , image: null, password: "1234567a", contacts: contactsOfSivan   },
         {userName: "Ofri Zangi" , nickName: "ofriki" , image: null, password: "abcd1234", contacts: contactsOfOfri },
         {userName: "Eden Ben Zaken" , nickName: "edna" , image: null, password: "aaaaaaaa8", contacts: contactsOfEden },
         {userName: "Hanan Ben Ari" , nickName: "hanania" , image: null, password: "1c1c1c1c1c", contacts:contactsOfHanan },

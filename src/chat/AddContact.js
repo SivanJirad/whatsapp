@@ -39,7 +39,6 @@ function AddContact(props) {
 
         <div  className="top-row list-group-item d-flex align-items-center">
         <img src={props.image} className="avatar"></img>
-        {console.log(props.image)}   
         <span className="w-100 m-2 ms-3 nameContact" >{props.userName}</span> 
 
    
