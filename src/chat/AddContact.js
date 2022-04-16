@@ -9,10 +9,14 @@ function AddContact(props) {
     let name = useRef();
 
     const addContact = function (event) {
+        event.preventDefault();
+
         let contName = name.current.value;
         name.current.value = ''
 
-        if (users.findIndex(x => (x.userName === contName)) === -1) {
+        let indexOfUserInArrey= users.findIndex(x => (x.userName === contName))
+
+        if (indexOfUserInArrey === -1) {
             alert("This user does nor exist!")
         }
 
@@ -20,11 +24,21 @@ function AddContact(props) {
         {
             alert("You can't add someone who is allready your contact")
         }
+        else if(contName===props.userName)
+        {
+            alert("it Is You :(")
+        }
+        
         else{
         props.setContact((prev)=>{
             return prev.concat({userName: contName, messages:[]})
         })
-        users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, messages:[]}]
+        console.log(...props.existContacts)
+        console.log(props.indexOfMe)
+        console.log( users[props.indexOfMe])
+        console.log( users[indexOfUserInArrey])
+
+        users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName,image: users[indexOfUserInArrey].image,messages:[]}]
     }
     }
 
@@ -61,7 +75,6 @@ function AddContact(props) {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary " data-bs-dismiss="modal">Close</button>
-                            {/* אין תנאי שבודק את האיש קשר שהוכנס    */}
                             <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={addContact}>Add</button>
 
                         </div>

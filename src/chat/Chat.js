@@ -38,7 +38,7 @@ function Chat() {
         <div className="col-md-4" id="leftMenu">
 
 
-        <AddContact setContact={setContact} userName={user.userName} existContacts={user.contacts}  indexOfMe = {state} image ={user.image}/>
+        <AddContact setContact={setContact} userName={user.userName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
 
           <div className="scroll">
             {<ChatList contacts={contact} setUser={setUserChatPrassed} setMessages = {setMessage}/>}
