@@ -1,5 +1,7 @@
 .textBox{
     margin: 30pt;
+    max-width: 40%;
+    width: fit-content;
 }
 
 .allChat{
@@ -17,13 +19,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    
+      overflow-wrap: anywhere;
     /* align-items: flex-start */
         /* justify-self: end; */
     /* display: flex;
     display: table;
 
     align-items: flex-end  */
+    margin-bottom: 12px;
 }
 
 .send{
