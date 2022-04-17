@@ -1,9 +1,5 @@
 import './chat.css'
-import avatar from './avatar.png' 
-import SendMessage from "./SendMessage";
 import { useState, useEffect } from 'react';
-import {users} from '../Users'
-// export let userChatPrassed = null
 
 function ChatItem(props) {
 
@@ -65,17 +61,18 @@ const getTimeAgoString = (timestamp) => {
             
             <span className="w-100 m-2 ms-3 nameContact" >
                 <div>{props.contact.userName}</div>
-                {props.contact.messages[props.contact.messages.length-1].type === 'text' && <div> {props.contact.messages[props.contact.messages.length-1].message}</div>} 
-                {props.contact.messages[props.contact.messages.length-1].type === 'image' && <div> <i className="bi bi-image"></i> image</div>}
-                {props.contact.messages[props.contact.messages.length-1].type === 'video' && <div> <i className="bi bi-camera-video"></i> video</div>}
-                {props.contact.messages[props.contact.messages.length-1].type === 'audio' && <div> <i className="bi bi-mic"></i> audio</div>}
+                {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'text' && <div> {props.contact.messages[props.contact.messages.length-1].message}</div>} 
+                {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'image' && <div> <i className="bi bi-image"></i> image</div>}
+                {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'video' && <div> <i className="bi bi-camera-video"></i> video</div>}
+                {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'audio' && <div> <i className="bi bi-mic"></i> audio</div>}
 
             
             </span> 
             
-            <span> {getTimeAgoString(props.contact.messages[props.contact.messages.length-1].date)}   </span>
+            <span> {props.contact.messages.length !== 0  && getTimeAgoString(props.contact.messages[props.contact.messages.length-1].date)}   </span>
        
             {/* <span className="badge bg-primary rounded-pill">14</span> */}
+            {/* </span> */}
 
            
             </button>
