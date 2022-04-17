@@ -24,7 +24,7 @@ export const users = [
     {userName: "Eden Ben Zaken" , nickName: "edna" , image: null, password: "aaaaaaaa8", contacts: [...contacts] },
     {userName: "Hanan Ben Ari" , nickName: "hanania" , image: null, password: "1c1c1c1c1c", contacts: [...contacts] },
     {userName: "Keran Peles" , nickName: "keran" , image: null, password: "keran666", contacts: [...contacts] }
-    ];
+];
 
 
 // users[0].contacts.splice(0,1)
