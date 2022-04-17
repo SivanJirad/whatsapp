@@ -8,10 +8,10 @@ function WindowPop(props){
 
     const popoverTop = (
       <Popover id="popover-positioned-top" title="Popover top">
+
         <AttachImage/>
         <AttachVideo/>
         <AttachAudio/>
-
       </Popover>
     );
 
