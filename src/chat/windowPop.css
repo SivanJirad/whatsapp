@@ -1,6 +1,14 @@
 .attchment-icon{
 font-size: xx-large;
-cursor: pointer
+cursor: pointer;
+
+}
+
+.mic{
+position: absolute;
+top: 80%;
+left: 2%;
+
 
 }
 
@@ -11,7 +19,7 @@ cursor: pointer
 
 .bi-paperclip {
     font-size: x-large;
-    cursor: pointer
+    cursor: pointer;
 }
 
 /* .bs-popover-auto[data-popper-placement^=top]>.popover-arrow, .bs-popover-top>.popover-arrow {

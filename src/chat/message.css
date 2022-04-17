@@ -39,6 +39,11 @@
 
 }
 
+.my-audio{
+  background-color: transparent;
+  border-color: transparent;
+}
+
 
 /* .alert-success{
   align-items: flex-start

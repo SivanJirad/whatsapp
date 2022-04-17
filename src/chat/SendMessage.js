@@ -11,15 +11,16 @@ function SendMessage(props) {
     let mes = input.current.value
     input.current.value = ''
     if (mes!=""){
-    setNewMessage("text", mes)}
+      setNewMessage("text", mes)}
   }
 
   const setNewMessage = function (type, mes) {
     let index1 = props.arrContact.findIndex(x => (x.userName === props.chatUser))
-    props.arrContact[index1].messages = [...props.arrContact[index1].messages, { message: mes, sentByMe: true, type: type }]
-    props.arrContactMessage.messages = [...props.arrContactMessage.messages, { message: mes, sentByMe: false, type: type }]
+    const currentTimeSatmp = new Date()
+    props.arrContact[index1].messages = [...props.arrContact[index1].messages, { message: mes, sentByMe: true, type: type, date:currentTimeSatmp }]
+    props.arrContactMessage.messages = [...props.arrContactMessage.messages, { message: mes, sentByMe: false, type: type, date:currentTimeSatmp }]
     props.setMessage((prev) => {
-      return prev.concat({ message: mes, sentByMe: true, type: type })
+      return prev.concat({ message: mes, sentByMe: true, type: type, date:currentTimeSatmp })
     }
     )
   }

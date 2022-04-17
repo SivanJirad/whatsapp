@@ -52,7 +52,7 @@ function AddContact(props) {
     return (
 
         <div  className="top-row list-group-item d-flex align-items-center">
-        <img src={avatar} alt="Avatar" className="avatar"></img>
+        <img src={props.image} alt="Avatar" className="avatar"></img>
         <span className="w-100 m-2 ms-3 nameContact" >{props.userName}</span> 
        
             <i className="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
