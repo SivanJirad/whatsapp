@@ -1,5 +1,7 @@
 .textBox{
     margin: 30pt;
+    max-width: 40%;
+    width: fit-content;
 }
 
 .allChat{
@@ -12,8 +14,44 @@
     left: 0; */
     border-radius: 10px;
     margin: 30px;
-    justify-self: end;
-    
+
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+      overflow-wrap: anywhere;
+    /* align-items: flex-start */
+        /* justify-self: end; */
+    /* display: flex;
+    display: table;
+
+    align-items: flex-end  */
+    margin-bottom: 12px;
+}
+
+.send{
+  align-items: flex-start;
+
+}
+
+.get{
+  align-items: flex-end;
+
+}
+
+
+/* .alert-success{
+  align-items: flex-start
+  flex-direction: row;
+}
+
+.alert-warning{
+  flex-direction: row-reverse;
+} */
+
+.sizeImage{
+  width: 200px;
+  /* height: 50px; */
 }
 
 

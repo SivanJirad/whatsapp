@@ -10,21 +10,22 @@ import {users} from '../Users'
 
 function Chat() {
   const { state } = useLocation();
-
-  let user = users[state];
+  let user = users[state.index];
   let [contact, setContact] = useState(user.contacts);
   const [messages, setMessage] = useState([])
   const [userChatPrassed, setUserChatPrassed] = useState(null);
 
-  // props.setUser({userName: contact.userName , messages: contact.messages});
-
-// console.log(state.contacts)
-
-
   const getArrOfUserContact = function(){
-    
+    //מוצא את האינדקס של האיש קשר במערך של המשתמשים
+    //הבעיה שלא הוספנו את המשתמש החדש כאיש קשר ליתר המשתמשים
       let index1 = users.findIndex(x => (x.userName ===  userChatPrassed.userName))
       let index2 = users[index1].contacts.findIndex(x => (x.userName ===  user.userName))
+      //המשתמש החדש לא קיים כאיש קשר אצל האיש קשר שאליו שלח הודעה
+      if(index2===-1){
+        users[index1].contacts= [...users[index1].contacts,{userName: user.userName,image:user.image, messages:[] }]
+        index2=users[index1].contacts.length-1
+      }
+    
 
       return users[index1].contacts[index2];
   }
@@ -37,7 +38,7 @@ function Chat() {
         <div className="col-md-4" id="leftMenu">
 
 
-        <AddContact setContact={setContact} userName={user.userName} existContacts={user.contacts}  indexOfMe = {state}/>
+        <AddContact setContact={setContact} userName={user.userName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
 
           <div className="scroll">
             {<ChatList contacts={contact} setUser={setUserChatPrassed} setMessages = {setMessage}/>}

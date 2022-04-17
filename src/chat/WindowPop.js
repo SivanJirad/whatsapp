@@ -8,23 +8,19 @@ function WindowPop(props){
 
     const popoverTop = (
       <Popover id="popover-positioned-top" title="Popover top">
-
-        <AttachImage/>
-        <AttachVideo/>
+        <AttachImage setNewMessage={props.setNewMessage}/>
+       <AttachVideo setNewMessage={props.setNewMessage}/>
         <AttachAudio/>
       </Popover>
     );
 
 
-
-    return(
+return(
 <div>
 
 <OverlayTrigger trigger="click" placement="top" overlay={popoverTop} rootClose>
-      <Button> <i className="bi bi-paperclip"></i></Button>
+      <i className="bi bi-paperclip" ></i>
     </OverlayTrigger>
-
-
       </div>
 
         );

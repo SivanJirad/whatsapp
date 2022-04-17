@@ -12,15 +12,12 @@ function Signin() {
     const navigate = useNavigate();
 
     
-
-
     const goToChatPage = (event) => {
-        // console.log(users)
-        // event.preventDefault();
+        event.preventDefault();
         let transfer = false;
         for (let i = 0; i < users.length; i++) {
             if (users[i].userName === userName && users[i].password === password) {
-                navigate('/chats', { state: i });
+                navigate('/chats', { state:{index:i}});
                 transfer = true
             }
         }
