@@ -13,7 +13,7 @@ function UserTextBox(props) {
 
             <div className="top-row list-group-item d-flex align-items-center">
                 <img src={props.item.image} alt="Avatar" className="avatar"></img>
-                <span className="w-100 m-2 ms-3 nameContact" >{props.item.userName}</span>
+                <span className="w-100 m-2 ms-3 nameContact chat-name" >{props.item.nickName}</span>
 
             </div>
             <div className="message-scroll">

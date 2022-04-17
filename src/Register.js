@@ -20,26 +20,6 @@ function Register() {
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
-
-    const chekUserName = function () {
-        let UserNameExsist = false
-        var user = document.getElementById('username').value;
-
-        var messageUser = document.getElementById('userNameValid');
-
-        for (let i = 0; i < users.length; i++) {
-            if (users[i].name === user) {
-                return true;
-            }
-        }
-        if (UserNameExsist || user === '') {
-            messageUser.innerHTML = '<p>user is not valid</p>';
-        }
-        else {
-            messageUser.innerHTML = '';
-        }
-    }
-
     const checkPass2 = function () {
         var pass = document.getElementById('Password').value
         var message = document.getElementById('StrongPass')
@@ -58,7 +38,18 @@ function Register() {
     }
 
 
-    const shoot = function (event) {
+
+    const UserNameExist = function(){
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].userName === userName) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    const checkIfValidAndSubmit = function (event) {
         event.preventDefault();
         var checkPass = document.getElementById('checkPass').value;
 
@@ -68,30 +59,30 @@ function Register() {
         else if (password !== checkPass) {
             alert('Password is not matching');
         }
+        else if(UserNameExist() || userName === ''){
+            alert('User Name is not valid');
+        }
         else {
-            const arr = [...contacts]
-            users.push({ userName: userName, nickName: nickName, image: image, password: password, contacts: arr });
+            const arr = []
+            contacts.map((item)=> arr.push({userName:item.userName, nickName:item.nickName , image:item.image, messages:item.messages}))
+            if (nickName === '')
+                users.push({ userName: userName, nickName: userName, image: image, password: password, contacts: arr });
+            else
+                users.push({ userName: userName, nickName: nickName, image: image, password: password, contacts: arr });
             navigate('/chats',  { state:{index:users.length - 1}});
         }
     }
 
 
-
-
     const uploadImage = (event) => {
             let value = URL.createObjectURL(event.target.files[0]);
-
             setImage(value);
-
-
         };
-
 
 
 
     return (
         <div>
-
             <img id="logoR" src={logo}></img>
             <div className='centerR shadow-lg p-3 mb-5 bg-white rounded'>
 
@@ -99,13 +90,12 @@ function Register() {
                 <form method='post'>
 
                     <table className="table table-borderless">
-
                         <tbody>
                             <tr>
                                 <td>
                                     <div className="form-floating form-floating-register">
                                         <input type="text" className="form-control form-control-register" id="username" name="username"
-                                            placeholder="User Name" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
+                                            placeholder="User Name" onChange={event => setUserName(event.target.value)} ></input>
                                         <label className='string' htmlFor="username"><i className="bi bi-person-fill"></i>
                                             User Name</label>
                                         <span id="userNameValid"></span> <br></br>
@@ -125,9 +115,8 @@ function Register() {
                             <tr>
                                 <td><div className="form-floating">
                                     <input type="text" className="form-control form-control-register" id="NickName" name="username"
-                                        placeholder="NickName" onInput={chekUserName} onChange={event => setUserName(event.target.value)} ></input>
-                                    <label className='string' htmlFor="username"><i className="bi bi-person-fill"></i>
-                                        Nick Name</label>
+                                        placeholder="NickName"  onChange={event => setNickName(event.target.value)} ></input>
+                                    <label className='string' htmlFor="username"><i className="bi bi-person-fill"></i> Nick Name</label>
                                     <span id="userNameValid"></span>
                                 </div></td>
                                 <td>    <div className="form-floating">
@@ -143,7 +132,7 @@ function Register() {
                     </table>
                     <input type="file" className="form-control form-control-imag " id="image" name="image" accept="image/png, image/jpeg" onChange={uploadImage}></input>
 
-                    <button type="submit" id="btn" className="btn btn_start btn-primary" onClick={shoot} > Submit</button>
+                    <button type="submit" id="btn" className="btn btn_start btn-primary" onClick={checkIfValidAndSubmit} > Submit</button>
                     <div className="link">
                         Already have an account?&nbsp;
                         <Link to='/'>Log in</Link>

@@ -81,6 +81,8 @@
 .nameContact {
     text-align-last: left;
     margin-top: 0;
+    display: inline-block;
+    width: 53%;
 }
 
 .scroll {
@@ -90,8 +92,8 @@
 }
 
 .modal-content{
-        background: #dbccdb;
-        color: black;
+    background: #dbccdb;
+    color: black;
 }
 
 
@@ -122,6 +124,41 @@ padding: auto;
     font-size: x-large;
     cursor: pointer
 }
+
+.chat-name{
+    font-weight: bold;
+}
+
+/* .last-message{
+    flex-grow: 1;
+    overflow: hidden;
+    font-size: 14px;
+    /* font-weight: 400; */
+    /* line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+    /* max-width: 40%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex; */
+/* } */ 
+
+
+.last-message{
+    overflow-x: hidden;
+}
+
+
+.time-ago{
+    font-size: 10pt;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+}
+
+
+
 
 
 

@@ -19,7 +19,6 @@ function AddContact(props) {
         if (indexOfUserInArrey === -1) {
             alert("This user does nor exist!")
         }
-
         else if( props.existContacts.findIndex(x => (x.userName === contName)) !== -1)
         {
             alert("You can't add someone who is allready your contact")
@@ -28,17 +27,17 @@ function AddContact(props) {
         {
             alert("it Is You :(")
         }
-        
+    
         else{
         props.setContact((prev)=>{
-            return prev.concat({userName: contName, image: users[indexOfUserInArrey].image, messages:[]})
+            return prev.concat({userName: contName, nickName:users[indexOfUserInArrey].nickName , image: users[indexOfUserInArrey].image, messages:[]})
         })
         console.log(...props.existContacts)
         console.log(props.indexOfMe)
         console.log( users[props.indexOfMe])
         console.log( users[indexOfUserInArrey])
 
-        users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, image: users[indexOfUserInArrey].image ,messages:[]}]
+        users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, nickName:users[indexOfUserInArrey].nickName, image: users[indexOfUserInArrey].image ,messages:[]}]
     }
     }
 
@@ -53,7 +52,7 @@ function AddContact(props) {
 
         <div  className="top-row list-group-item d-flex align-items-center">
         <img src={props.image} alt="Avatar" className="avatar"></img>
-        <span className="w-100 m-2 ms-3 nameContact" >{props.userName}</span> 
+        <span className="w-100 m-2 ms-3 nameContact chat-name" >{props.userName}</span> 
        
             <i className="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
