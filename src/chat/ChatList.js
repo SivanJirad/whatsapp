@@ -8,7 +8,6 @@ function ChatList(props){
 
     return(
 
-
         <div className="list-group list-group-flush">
             { props.contacts.map((item)=> <ChatItem contact={item} setUser={props.setUser} setMessages = {props.setMessages}/>) }
         </div> 
