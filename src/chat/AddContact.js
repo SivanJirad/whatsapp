@@ -31,14 +31,14 @@ function AddContact(props) {
         
         else{
         props.setContact((prev)=>{
-            return prev.concat({userName: contName, messages:[]})
+            return prev.concat({userName: contName, image: users[indexOfUserInArrey].image, messages:[]})
         })
         console.log(...props.existContacts)
         console.log(props.indexOfMe)
         console.log( users[props.indexOfMe])
         console.log( users[indexOfUserInArrey])
 
-        users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName,image: users[indexOfUserInArrey].image,messages:[]}]
+        users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, image: users[indexOfUserInArrey].image ,messages:[]}]
     }
     }
 
