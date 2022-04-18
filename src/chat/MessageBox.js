@@ -3,6 +3,7 @@ import './message.css'
 
 
 function MessageBox(props) {
+    // delete me
 
     let className = "alert message ".concat(props.item.sentByMe ? 'alert-success send' : 'alert-warning recieve');
 

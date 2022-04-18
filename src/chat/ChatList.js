@@ -5,6 +5,8 @@ import avatar from './avatar.png'
 import AddContact from "./AddContact";
 
 function ChatList(props){
+        // delete me
+
 
     return(
 

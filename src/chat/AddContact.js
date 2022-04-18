@@ -7,6 +7,7 @@ import ChatList from './ChatList';
 function AddContact(props) {
 
     let name = useRef();
+    // delete me
 
     const addContact = function (event) {
         event.preventDefault();
@@ -27,6 +28,7 @@ function AddContact(props) {
         {
             alert("it Is You :(")
         }
+        
     
         else{
         props.setContact((prev)=>{

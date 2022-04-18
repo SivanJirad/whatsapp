@@ -2,6 +2,7 @@ import './chat.css'
 import { useState, useEffect } from 'react';
 
 function ChatItem(props) {
+    // delete me
 
 
     const [date, setDate] = useState(new Date())

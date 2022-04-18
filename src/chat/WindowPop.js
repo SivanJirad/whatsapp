@@ -7,6 +7,9 @@ import AttachAudio from './AttachAudio';
 import AttachFile from './AttachFile';
 function WindowPop(props){
 
+      // delete me
+
+
     const popoverTop = (
       <Popover id="popover-positioned-top" title="Popover top">
         <AttachFile setNewMessage={props.setNewMessage}/>

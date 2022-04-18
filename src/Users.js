@@ -9,6 +9,11 @@ export const contacts = [{userName:"Aviv Gefen", nickName: "avivi", image:"https
 
 
 
+    // delete me
+
+
+
+
 // we can't change the array users points on by we can change the elements in the array
 // export const users = [
 // {userName: "Sivan Jhirad" , nickName: "sivani" , image: null, password: "1234567a", contacts: [...contacts] },

@@ -9,6 +9,9 @@ import {users} from '../Users'
 
 
 function Chat() {
+      // delete me
+
+
   const { state } = useLocation();
   let user = users[state.index];
   let [contact, setContact] = useState(user.contacts);
