@@ -25,27 +25,6 @@ function SendMessage(props) {
   }
 
 
-  // sendMessage = () => {
-  //   let messages = [...this.state.messages, this.state.value];
-
-  //   console.log("MESSAGES", messages);
-
-  //   this.setState(
-  //     {
-  //       messages
-  //     },
-  //     () => this.scrollToMyRef()
-  //   );
-  // };
-
-  // const scrollToMyRef = () => {
-  //   // const scroll = this.chatContainer.current.scrollHeight - this.chatContainer.current.clientHeight;
-  //   window.scrollTo(0, 4000);
-  // };
-
-
-
-
 
   const checkIfEnter = function (event) {
     if (event.key === 'Enter')
