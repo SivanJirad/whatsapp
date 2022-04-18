@@ -5,7 +5,7 @@ import './message.css'
 function MessageBox(props) {
     // delete me
 
-    let className = "alert recieve-message ".concat(props.item.sentByMe ? 'alert-success send' : 'alert-warning recive');
+    let className = "alert message ".concat(props.item.sentByMe ? 'alert-success send' : 'alert-warning recieve');
 
 
         const chekTypeMassage = function () {
@@ -14,6 +14,7 @@ function MessageBox(props) {
                     <div>{props.item.message}</div>
                    <div>{props.item.date.toLocaleString()}</div>
                 </span>
+                
             }
             else if (props.item.type === 'image') {
                 return <span className={className}>
@@ -51,6 +52,5 @@ function MessageBox(props) {
 }
 
 export default MessageBox;
-
 
 
