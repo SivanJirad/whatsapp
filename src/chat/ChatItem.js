@@ -16,8 +16,7 @@ function ChatItem(props) {
 
     const goToMethod = function(){
         props.setMessages(props.contact.messages);
-        props.setUser({userName: props.contact.userName, image: props.contact.image, messages: props.contact.messages});
-
+        props.setUser({userName: props.contact.userName,nickName:props.contact.nickName, image: props.contact.image, messages: props.contact.messages});
     }
 
     const SECOND = 1000,
@@ -54,23 +53,37 @@ const getTimeAgoString = (timestamp) => {
     return getElapsedString(YEAR, 'year');
 };
 
+
+    const printText = function(){
+
+        let mes = props.contact.messages[props.contact.messages.length-1].message
+        if(mes.length > 18){
+            let new_mes = mes.substring(0, 18) + "..."
+            mes = new_mes    
+        }
+        return(
+            <div> {mes}</div>
+        );
+    }
+
     return (
         
       
             <button type="button" className="list-group-item list-group-item-action d-flex align-items-center" onClick={goToMethod}>
             <img src={props.contact.image} alt="Avatar" className="avatar"></img>
             
-            <span className="w-100 m-2 ms-3 nameContact" >
-                <div>{props.contact.userName}</div>
-                {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'text' && <div> {props.contact.messages[props.contact.messages.length-1].message}</div>} 
+            <span className="m-2 ms-3 nameContact" >
+                <div className='chat-name'>{props.contact.nickName}</div>
+                <div className='last-message'>
+                {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'text' && <div>{ props.contact.messages[props.contact.messages.length-1].message}</div>} 
                 {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'image' && <div> <i className="bi bi-image"></i> image</div>}
                 {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'video' && <div> <i className="bi bi-camera-video"></i> video</div>}
                 {props.contact.messages.length !== 0 && props.contact.messages[props.contact.messages.length-1].type === 'audio' && <div> <i className="bi bi-mic"></i> audio</div>}
-
+                </div>
             
             </span> 
             
-            <span> {props.contact.messages.length !== 0  && getTimeAgoString(props.contact.messages[props.contact.messages.length-1].date)}   </span>
+            <span className='time-ago'> {props.contact.messages.length !== 0  && getTimeAgoString(props.contact.messages[props.contact.messages.length-1].date)}   </span>
        
             {/* <span className="badge bg-primary rounded-pill">14</span> */}
             {/* </span> */}
