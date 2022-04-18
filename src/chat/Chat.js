@@ -28,6 +28,8 @@ function Chat() {
         users[index1].contacts= [...users[index1].contacts,{userName: user.userName,image:user.image, messages:[] }]
         index2=users[index1].contacts.length-1
       }
+    
+
       return users[index1].contacts[index2];
   }
 
@@ -37,7 +39,9 @@ function Chat() {
       <div className="row">
 
         <div className="col-md-4" id="leftMenu">
-        <AddContact setContact={setContact} userName={user.nickName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
+
+
+        <AddContact setContact={setContact} userName={user.userName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
 
           <div className="scroll">
             {<ChatList contacts={contact} setUser={setUserChatPrassed} setMessages = {setMessage}/>}
@@ -45,7 +49,7 @@ function Chat() {
         </div>  
         <div className="col-md-8" id="chats">
 
-        { userChatPrassed !== null && <UserTextBox arrContactMessage={getArrOfUserContact()} item={userChatPrassed} userName={user.nickName} messages = {messages} setMessages = {setMessage} arrContact = {user.contacts}/>}  
+        { userChatPrassed !== null && <UserTextBox arrContactMessage={getArrOfUserContact()} item={userChatPrassed} userName={user.userName} messages = {messages} setMessages = {setMessage} arrContact = {user.contacts}/>}  
         {userChatPrassed !== null && <div className="top-row"></div>}
           <div>   
         </div>
