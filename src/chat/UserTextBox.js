@@ -14,7 +14,7 @@ function UserTextBox(props) {
                 <span className="w-100 m-2 ms-3 nameContact chat-name" >{props.item.nickName}</span>
 
             </div>
-            <div className="message-scroll">
+            <div className="message-scroll textBox">
                 {/* {props.messages.map((item) => item.sentByMe ? <SendMessageBox item={item} /> : <RecieveMessageBox item={item} />)} */}
                 {props.messages.map((item) => <MessageBox key={messageNum++} item={item} />)}
 
