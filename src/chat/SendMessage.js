@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import './chat.css'
-import { users } from '../Users'
+// import { users } from '../Users'
 import WindowPop from './WindowPop';
 
 function SendMessage(props) {
@@ -10,7 +10,7 @@ function SendMessage(props) {
   const uploadText = (event) => {
     let mes = input.current.value
     input.current.value = ''
-    if (mes!=""){
+    if (mes!==""){
       setNewMessage("text", mes)}
   }
 
@@ -21,9 +21,31 @@ function SendMessage(props) {
     props.arrContactMessage.messages = [...props.arrContactMessage.messages, { message: mes, sentByMe: false, type: type, date:currentTimeSatmp }]
     props.setMessage((prev) => {
       return prev.concat({ message: mes, sentByMe: true, type: type, date:currentTimeSatmp })
-    }
-    )
+    })
   }
+
+
+  // sendMessage = () => {
+  //   let messages = [...this.state.messages, this.state.value];
+
+  //   console.log("MESSAGES", messages);
+
+  //   this.setState(
+  //     {
+  //       messages
+  //     },
+  //     () => this.scrollToMyRef()
+  //   );
+  // };
+
+  // const scrollToMyRef = () => {
+  //   // const scroll = this.chatContainer.current.scrollHeight - this.chatContainer.current.clientHeight;
+  //   window.scrollTo(0, 4000);
+  // };
+
+
+
+
 
   const checkIfEnter = function (event) {
     if (event.key === 'Enter')
