@@ -36,17 +36,16 @@ function Chat() {
     <div className="container center-chats">
       <div className="row">
 
-        <div className="col-md-4" id="leftMenu">
+        <div className="col-sm-4" id="leftMenu">
         <AddContact setContact={setContact} userName={user.nickName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
 
           <div className="scroll">
             {<ChatList contacts={contact} setUser={setUserChatPrassed} setMessages = {setMessage}/>}
           </div>
         </div>  
-        <div className="col-md-8" id="chats">
+        <div className="col-sm-8" id="chats">
 
         { userChatPrassed !== null && <UserTextBox arrContactMessage={getArrOfUserContact()} item={userChatPrassed} userName={user.nickName} messages = {messages} setMessages = {setMessage} arrContact = {user.contacts}/>}  
-        {userChatPrassed !== null && <div className="top-row"></div>}
           <div>   
         </div>
         </div>
