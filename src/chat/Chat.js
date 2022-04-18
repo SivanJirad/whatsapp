@@ -24,7 +24,7 @@ function Chat() {
       let index2 = users[index1].contacts.findIndex(x => (x.userName ===  user.userName))
       //המשתמש החדש לא קיים כאיש קשר אצל האיש קשר שאליו שלח הודעה
       if(index2===-1){
-        users[index1].contacts= [...users[index1].contacts,{userName: user.userName,nickName:user.nickName, image:user.image, messages:[] }]
+        users[index1].contacts= [...users[index1].contacts,{userName: user.userName, nickName:user.nickName, image:user.image, messages:[] }]
         index2=users[index1].contacts.length-1
       }
       return users[index1].contacts[index2];
