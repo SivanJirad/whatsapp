@@ -7,9 +7,8 @@ import './chat.css'
 import UserTextBox from './UserTextBox'
 import {users} from '../Users'
 
-
+import NameContact from './NameContact'
 function Chat() {
-      // delete me
 
 
   const { state } = useLocation();
@@ -45,8 +44,11 @@ function Chat() {
         </div>  
         <div className="col-sm-8" id="chats">
 
-        { userChatPrassed !== null && <UserTextBox arrContactMessage={getArrOfUserContact()} item={userChatPrassed} userName={user.nickName} messages = {messages} setMessages = {setMessage} arrContact = {user.contacts}/>}  
-          <div>   
+        {userChatPrassed !== null && <NameContact item={userChatPrassed}/>}
+        { userChatPrassed !== null && <UserTextBox messages = {messages}/>}  
+        <div>   
+
+        {userChatPrassed !== null && <SendMessage arrContactMessage={getArrOfUserContact()} setMessage={setMessage} myUser={user.nickName} chatUser={userChatPrassed.userName} arrContact={user.contacts} />}
         </div>
         </div>
       </div>
