@@ -83,8 +83,6 @@
     color: black;
 }
 
-
-/* icons */
 .bi-person-plus{
     cursor: pointer;
  
@@ -112,7 +110,8 @@ padding: auto;
 
 
 .last-message{
-    overflow-x: hidden;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 

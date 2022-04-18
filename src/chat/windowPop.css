@@ -4,11 +4,11 @@ cursor: pointer;
 
 }
 
-.mic{
+#mic{
 position: absolute;
 top: 80%;
 left: 2%;
-
+background-color: rgb(66, 91, 233);
 
 }
 
@@ -31,3 +31,34 @@ left: 2%;
 .chooseImage{
     display: none;
 } 
+
+
+.mic-color{
+    background-color: aqua;
+    border-radius: 10px;
+    /* margin-top: 50pt; */
+}
+
+
+
+.file-color{
+    background-color:aquamarine;
+    border-radius: 10px;
+}
+
+
+.image-color{
+    background-color: plum;
+    border-radius: 10px;
+}
+
+
+.video-color{
+    background-color: rgb(240, 174, 162);
+    border-radius: 10px;
+}
+
+
+.margin-from-mic{
+    margin-top: 10pt;
+}

@@ -26,7 +26,7 @@ function AttachFile(props) {
             <input type="file" className="form-control form-control-imag  chooseImage" id="file" name="file" accept="application/pdf" onChange={send} ref={fileInput}></input>
 
             </div>
-            <div><i className="bi bi-filetype-pdf attchment-icon" onClick={uploadFile}></i></div>
+            <div><i className="bi bi-filetype-pdf file-color attchment-icon" onClick={uploadFile}></i></div>
         </div>
 
     );

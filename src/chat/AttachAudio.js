@@ -93,7 +93,7 @@ function AttachAudio(props){
         // const handleShow = () => setShow(true);
       
         return (
-          <div>
+          <div className="margin-from-mic">
             {/* <Button onClick={handleShow}>
               Launch demo modal
             </Button> */}
@@ -123,10 +123,10 @@ function AttachAudio(props){
 
 
 
-            <i onClick={getAccess} className="bi bi-mic attchment-icon" data-bs-toggle="tooltip" data-bs-placement="right"
+            <i onClick={getAccess} className="bi bi-mic mic-color attchment-icon" data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="click me to record and than click again to send"></i>
             {stream.recorder!== null && !recording.active && stream.recorder.start()}
-            {stopMic && <i onClick={() => stream.recorder.stop()} className="bi bi-mic attchment-icon mic" data-bs-toggle="tooltip" data-bs-placement="right"
+            {stopMic && <i onClick={() => stream.recorder.stop()} className="bi bi-mic attchment-icon" id="mic" data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="click again to send"></i>}
             {/* <button onClick={() => stream.recorder.stop()}>Stop Recording</button> */}
             {recording.available &&  sendMessage()}

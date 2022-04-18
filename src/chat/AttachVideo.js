@@ -5,7 +5,6 @@ import { useRef } from "react";
 import React, { Component } from 'react';
 
 function AttachViedo(props){
-      // delete me
 
         let videoInput = useRef();
 
@@ -26,7 +25,7 @@ function AttachViedo(props){
                 <div className="mb-3">
                 <input type="file" className="form-control form-control-imag chooseImage" id="image" name="video" accept="video/*" onChange={send} ref={videoInput}></input>
                 </div>
-                <div><i className="bi bi-camera-reels attchment-icon" onClick={uploaVideo}></i></div>
+                <div><i className="bi bi-camera-reels video-color attchment-icon" onClick={uploaVideo}></i></div>
             </div>
         );
 }

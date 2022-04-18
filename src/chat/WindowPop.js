@@ -15,7 +15,7 @@ function WindowPop(props){
         <AttachFile setNewMessage={props.setNewMessage}/>
         <AttachImage setNewMessage={props.setNewMessage}/>
        <AttachVideo setNewMessage={props.setNewMessage}/>
-        <AttachAudio setNewMessage={props.setNewMessage}/>
+       <AttachAudio setNewMessage={props.setNewMessage}/>
       </Popover>
     );
 
