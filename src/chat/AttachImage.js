@@ -6,7 +6,6 @@ import {useEffect, useState} from 'react';
 import React, { Component } from 'react';
 
 function AttachImage(props) {
-    // delete me
 
     let imageInput = useRef();
 

@@ -36,9 +36,9 @@ function SendMessage(props) {
 
     <div className="down-row d-flex align-items-center">
       <WindowPop setNewMessage={setNewMessage} />
-      <input type="text" id='TypingMessage' className="form-control shadow-none m-4 ms-3" placeholder="Typing a message" aria-label="Typing a message"
+      <input type="text" id='TypingMessage' className="form-control shadow-none" placeholder="Typing a message" aria-label="Typing a message"
         ref={input} onKeyDown={checkIfEnter}></input>
-      <i className="bi bi-send" onClick={uploadText}  ></i>
+      <i className="bi bi-send icon-send" onClick={uploadText}  ></i>
     </div>
   );
 }

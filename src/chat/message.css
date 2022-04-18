@@ -11,31 +11,28 @@
 /* delete */
 
 .message{
-    /* position: absolute;
-    left: 0; */
     border-radius: 10px;
     margin: 20px;
-
-
     position: relative;
     display: flex;
     flex-direction: column;
     overflow-wrap: anywhere;
-    /* align-items: flex-start */
-        /* justify-self: end; */
-    /* display: flex;
-    display: table;
+    margin-bottom: 0;
+    padding: 10px;
+    padding-bottom: 0;
+    max-width: 50%;
 
-    align-items: flex-end  */
-    margin-bottom: 12px;
 }
 
 
 .chat-log_time {
-	margin: 0 auto .5em;
-	direction: rtl;
 	font-size: 12px;
 	opacity: 0.5;
+  text-align: left;
+  border-top: 0.5px solid;
+  margin: 1pt;
+
+
 }
 
 .send{
@@ -85,6 +82,14 @@ border-radius:7px 7px 7px 7px ; */
 
 
 }
+
+.icon-send{
+  margin: 5pt;
+}
+/* .message-border{
+  border-bottom: 0.5px solid;
+}
+} */
 
 
 /* .alert-success{

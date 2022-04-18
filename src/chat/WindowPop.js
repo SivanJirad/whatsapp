@@ -24,7 +24,7 @@ return(
 <div>
 
 <OverlayTrigger trigger="click" placement="top" overlay={popoverTop} rootClose>
-      <i className="bi bi-paperclip" ></i>
+      <i className="bi bi-paperclip icon-send" ></i>
     </OverlayTrigger>
       </div>
 
