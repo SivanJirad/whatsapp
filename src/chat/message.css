@@ -1,7 +1,8 @@
 .textBox{
-    margin: 30pt;
-    max-width: 40%;
-    width: fit-content;
+    margin: 0;
+    width: 100%;
+    /* max-width: 100%; */
+    /* width: fit-content; */
 }
 
 .allChat{
@@ -13,13 +14,13 @@
     /* position: absolute;
     left: 0; */
     border-radius: 10px;
-    margin: 30px;
+    margin: 20px;
 
 
     position: relative;
     display: flex;
     flex-direction: column;
-      overflow-wrap: anywhere;
+    overflow-wrap: anywhere;
     /* align-items: flex-start */
         /* justify-self: end; */
     /* display: flex;
@@ -29,16 +30,42 @@
     margin-bottom: 12px;
 }
 
+
+.chat-log_time {
+	margin: 0 auto .5em;
+	direction: rtl;
+	font-size: 12px;
+	opacity: 0.5;
+}
+
 .send{
   float:left;
   text-align: left;
+  clear:both;
+  margin-right: 0.7rem;
+  border-radius: 0 20px 20px 20px;
 
 }
 
 .recieve{
   /* align-items: flex-end; */
   text-align: left;
-  float:right
+  /* position: relative; */
+  float:right;
+  clear:both;
+  margin-left: 0.7rem;
+  border-radius: 20px 0 20px 20px;
+
+  /* font: inherit;
+  font-size: 100%; */
+  /* vertical-align: initial; */
+  /* outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  margin-right: 0%; */
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 audio{
