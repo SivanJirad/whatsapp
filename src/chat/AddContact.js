@@ -52,13 +52,15 @@ function AddContact(props) {
  
     return (
 
-        <div  className="top-row list-group-item d-flex align-items-center">
-        <img src={props.image} alt="Avatar" className="avatar"></img>
-        <span className="w-100 m-2 ms-3 nameContact chat-name" >{props.userName}</span> 
-       
+<div className="top-row list-group-item d-flex align-items-center">
+            <img src={props.image} alt="Avatar" className="avatar"></img>
+            <span className="w-100 m-2 ms-3 nameContact" >{props.userName}</span>
+
             <i className="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
                 <div className="modal-dialog modal-dialog-centered">
+
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">Add Contact</h5>
@@ -68,16 +70,14 @@ function AddContact(props) {
                             <form>
                                 <div className="mb-3">
                                     <label htmlFor="recipient-name" className="col-form-label">Enter User Name</label>
-                                    <input type="text" className="form-control" id="recipient-name" ref={name} onKeyDown={checkIfEnter}></input>
+                                    <input type="text" className="form-control" id="recipient-name" ref={name}></input>
+                                    <button type="submit" id="btn" className=" btn btn_start btn-primary" data-bs-dismiss="modal" onClick={addContact} > Login</button>
                                 </div>
                             </form>
                         </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary " data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={addContact}>Add</button>
 
-                        </div>
-                    </div> 
+
+                    </div>
                 </div>
             </div>
 

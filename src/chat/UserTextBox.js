@@ -4,17 +4,8 @@ import './message.css'
 import MessageBox from "./MessageBox.js"
 
 
-import SendMessage from "./SendMessage";
-import './chat.css'
-import './message.css'
-import MessageBox from "./MessageBox.js"
-
-
 function UserTextBox(props) {
-
-    // delete me
-
-
+    let messageNum = 0
     return (
         <div>
 
@@ -25,7 +16,7 @@ function UserTextBox(props) {
             </div>
             <div className="message-scroll">
                 {/* {props.messages.map((item) => item.sentByMe ? <SendMessageBox item={item} /> : <RecieveMessageBox item={item} />)} */}
-                {props.messages.map((item) => <MessageBox item={item} />)}
+                {props.messages.map((item) => <MessageBox key={messageNum++} item={item} />)}
 
             </div>
 
