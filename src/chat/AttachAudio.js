@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./windowPop.css"
 import { Modal, Button } from "react-bootstrap";
 
@@ -6,7 +6,6 @@ import { Modal, Button } from "react-bootstrap";
 
 function AttachAudio(props){
 
-    // delete me
 
       const [stream, setStream] = useState({
         access: false,
@@ -20,6 +19,8 @@ function AttachAudio(props){
       });
 
       const [stopMic, setStopMic] = useState(false)
+
+
     
       const chunks = useRef([]);
     
