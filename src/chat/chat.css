@@ -15,6 +15,18 @@
     height: 80vh
 }
 
+#chats {
+   
+    padding: 0;
+    height: 80vh;
+    color: white;
+    padding: 0;
+    border-right: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
 .top-row {
     height: 60px;
     background-color: lightgray;
@@ -24,46 +36,31 @@
     height: 40px;
     width: 100%; 
     background-color: lightgray;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
 }
 
-/* .row{
+.scroll {
+    flex: 1 1 auto;
+    overflow-y: auto;
     height: 90vh;
-} */
-/* delete */
+    overflow-x: hidden
+}
 
-/* .container {
-    display: grid;
-    grid-template-rows: 100px 300px;
-    height: 100%;
-  } */
+
+
+
 
 #TypingMessage{
     border-radius: 3px;
     height: 70%;
 }
 
-/* .contact{
-    height: 80px;
-    width: 230px;
-    float: right;
-    position: relative;
-    right: 200pt;
-    top: 30pt;
-    text-align: left;
-    border-radius: 4px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 14pt;
-
-} */
 
 
-#chats {
-    padding: 0;
-    position: relative;
-}
+
+
 
 .avatar {
     vertical-align: middle;
@@ -79,12 +76,7 @@
     width: 53%;
 }
 
-.scroll {
-    flex: 1 1 auto;
-    overflow-y: auto;
-    height: 90vh;
-    overflow-x: hidden
-}
+
 
 .modal-content{
     background: #dbccdb;
@@ -106,14 +98,7 @@ padding: auto;
 
 }
 
-/* .list-group-item{
-    padding: 0;
-} */
 
-
-/* .container{
-    height: 100%;
-} */
 
 .bi-send {
     font-size: x-large;
@@ -124,20 +109,6 @@ padding: auto;
     font-weight: bold;
 }
 
-/* .last-message{
-    flex-grow: 1;
-    overflow: hidden;
-    font-size: 14px;
-    /* font-weight: 400; */
-    /* line-height: 20px;
-    text-overflow: ellipsis;
-    white-space: nowrap; */
-    /* max-width: 40%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    display: flex; */
-/* } */ 
 
 
 .last-message{
@@ -153,3 +124,48 @@ padding: auto;
 }
 
 
+/* .row{
+    height: 90vh;
+} */
+/* delete */
+
+/* .container {
+    display: grid;
+    grid-template-rows: 100px 300px;
+    height: 100%;
+  } */
+  /* .last-message{
+    flex-grow: 1;
+    overflow: hidden;
+    font-size: 14px;
+    /* font-weight: 400; */
+    /* line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+    /* max-width: 40%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex; */
+/* } */ 
+/* .list-group-item{
+    padding: 0;
+} */
+
+
+/* .container{
+    height: 100%;
+} */
+/* .contact{
+    height: 80px;
+    width: 230px;
+    float: right;
+    position: relative;
+    right: 200pt;
+    top: 30pt;
+    text-align: left;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+
+} */
