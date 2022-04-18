@@ -9,7 +9,7 @@
 }
 /* delete */
 
-.recieve-message{
+.message{
     /* position: absolute;
     left: 0; */
     border-radius: 10px;
@@ -30,18 +30,33 @@
 }
 
 .send{
-  align-items: flex-start;
+  float:left;
+  text-align: left;
 
 }
 
-.get{
-  align-items: flex-end;
-
+.recieve{
+  /* align-items: flex-end; */
+  text-align: left;
+  float:right
 }
 
-.my-audio{
+audio{
   background-color: transparent;
   border-color: transparent;
+  width:200px; 
+  /* -webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006773;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ; */
+
+
 }
 
 
@@ -58,6 +73,7 @@
   width: 200px;
   /* height: 50px; */
 }
+
 
 
 /* :root {
@@ -166,8 +182,13 @@
 .message-scroll{
     flex: 1 1 auto;
     overflow-y: auto;
-    height: 75vh;
+    height: 70vh;
 }
+
+
+
+
+
 
 
 
