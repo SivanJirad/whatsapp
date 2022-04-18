@@ -19,7 +19,7 @@ function Register() {
     const [image, setImage] = useState(avatar);
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-
+    console.log()
     const checkPass2 = function () {
         var pass = document.getElementById('Password').value
         var message = document.getElementById('StrongPass')
