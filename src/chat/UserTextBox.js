@@ -8,7 +8,7 @@ function UserTextBox(props) {
     let messageNum = 0
     return (
      
-            <div className="message-scroll textBox">
+            <div className="textBox">
                 {props.messages.map((item) => <MessageBox key={messageNum++} item={item} />)}
             </div>
 

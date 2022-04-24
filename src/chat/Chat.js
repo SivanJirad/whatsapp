@@ -6,6 +6,7 @@ import SendMessage from "./SendMessage";
 import './chat.css'
 import UserTextBox from './UserTextBox'
 import {users} from '../Users'
+import welcome from './welcome.jpg' 
 
 import NameContact from './NameContact'
 function Chat() {
@@ -18,11 +19,8 @@ function Chat() {
   const [userChatPrassed, setUserChatPrassed] = useState(null);
 
   const getArrOfUserContact = function(){
-    //מוצא את האינדקס של האיש קשר במערך של המשתמשים
-    //הבעיה שלא הוספנו את המשתמש החדש כאיש קשר ליתר המשתמשים
       let index1 = users.findIndex(x => (x.userName ===  userChatPrassed.userName))
       let index2 = users[index1].contacts.findIndex(x => (x.userName ===  user.userName))
-      //המשתמש החדש לא קיים כאיש קשר אצל האיש קשר שאליו שלח הודעה
       if(index2===-1){
         users[index1].contacts= [...users[index1].contacts,{userName: user.userName, nickName:user.nickName, image:user.image, messages:[] }]
         index2=users[index1].contacts.length-1
@@ -43,12 +41,15 @@ function Chat() {
           </div>
         </div>  
         <div className="col-sm-8" id="chats">
-
+        {userChatPrassed === null && <img src={welcome} className="welcome"></img>}
+        
         {userChatPrassed !== null && <NameContact item={userChatPrassed}/>}
+        <div className="message-scroll">
         { userChatPrassed !== null && <UserTextBox messages = {messages}/>}  
-        <div>   
+      </div>
+      <div>   
 
-        {userChatPrassed !== null && <SendMessage arrContactMessage={getArrOfUserContact()} setMessage={setMessage} myUser={user.nickName} chatUser={userChatPrassed.userName} arrContact={user.contacts} />}
+        {userChatPrassed !== null && <SendMessage arrContactMessage={getArrOfUserContact()} setMessage={setMessage} myUser={user.nickName} chatUser={userChatPrassed.userName} arrContact={user.contacts} roll={roll} />}
         </div>
         </div>
       </div>
