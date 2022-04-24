@@ -21,8 +21,7 @@ In order to run this app you must first run those installation commands:
 
 ## Features:
 
-![image](https://user-images.githubusercontent.com/88827751/164992927-a96da1a1-76e4-4eeb-87cb-77a5ba9a2fb8.png)
-
+![image](https://user-images.githubusercontent.com/88827751/164992979-252003bb-4068-42c5-93f2-2fb682272f35.png)
 
 
 
