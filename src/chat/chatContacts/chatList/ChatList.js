@@ -1,12 +1,8 @@
 import ChatItem from "./ChatItem";
 import { React, useEffect, useState } from 'react';
-// import { contacts } from '../Users';
-import avatar from './avatar.png' 
-import AddContact from "./AddContact";
+
 
 function ChatList(props){
-        // delete me
-
 
     return(
 

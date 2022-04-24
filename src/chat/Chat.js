@@ -1,14 +1,14 @@
 import { useLocation } from "react-router-dom";
-import ChatList from "./ChatList";
-import {useEffect, useState} from 'react';
-import AddContact from './AddContact'
-import SendMessage from "./SendMessage";
+import ChatList from "./chatContacts/chatList/ChatList";
+import {useState} from 'react';
+import SendMessage from "./messageScreen/SendMessage";
 import './chat.css'
-import UserTextBox from './UserTextBox'
+import UserTextBox from './messageScreen/UserTextBox'
 import {users} from '../Users'
 import welcome from './welcome.jpg' 
 
-import NameContact from './NameContact'
+import NameContact from './messageScreen/NameContact'
+import UserProfile from "./chatContacts/topLine/UserProfile";
 function Chat() {
 
 
@@ -34,7 +34,7 @@ function Chat() {
       <div className="row">
 
         <div className="col-sm-4" id="leftMenu">
-        <AddContact setContact={setContact} userName={user.nickName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
+        <UserProfile setContact={setContact} userName={user.nickName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
 
           <div className="scroll">
             {<ChatList contacts={contact} setUser={setUserChatPrassed} setMessages = {setMessage}/>}
@@ -49,7 +49,7 @@ function Chat() {
       </div>
       <div>   
 
-        {userChatPrassed !== null && <SendMessage arrContactMessage={getArrOfUserContact()} setMessage={setMessage} myUser={user.nickName} chatUser={userChatPrassed.userName} arrContact={user.contacts} />}
+        {userChatPrassed !== null && <SendMessage arrContactMessage={getArrOfUserContact()} setMessage={setMessage} myUser={user.nickName} chatUser={userChatPrassed.userName} arrContact={contact} />}
         </div>
         </div>
       </div>

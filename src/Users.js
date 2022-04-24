@@ -1,7 +1,7 @@
-import hananRecord from './hananRecord.ogg' 
-import edenVideo from './edenVideo.mp4'
-import miriAudio from './miriAudio.ogg'
-import noaVideo from './noaVideo.mp4'
+import hananRecord from './videos/hananRecord.ogg'
+import edenVideo from './videos/edenVideo.mp4'
+import miriAudio from './videos/miriAudio.ogg'
+import noaVideo from './videos/noaVideo.mp4'
 
 // sent = true means the message was sent by the current user, false means he recieved it
 export const contacts = [{userName:"Aviv Gefen", nickName: "avivi", image:"https://images.jpost.com/image/upload/f_auto,fl_lossy/t_JM_ArticleMainImageFaceDetect/442174", messages:[{message:"hi aviv", sentByMe:true, type: 'text', date: new Date()},  {message:"hello", sentByMe:false, type: 'text', date: new Date()} , {message:"come to my show!", sentByMe:false, type: 'text', date: new Date()}] },

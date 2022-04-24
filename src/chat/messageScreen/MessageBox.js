@@ -12,7 +12,6 @@ function MessageBox(props) {
                     <div>{props.item.message}</div>
                    <div className='chat-log_time'>{props.item.date.toLocaleString()}</div>
                 </div>
-                
             }
             else if (props.item.type === 'image') {
                 return <div className={className}>

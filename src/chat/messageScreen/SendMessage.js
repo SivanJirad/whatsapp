@@ -1,11 +1,8 @@
 import { useRef, useState } from 'react';
-import './chat.css'
-// import { users } from '../Users'
-import WindowPop from './WindowPop';
+import '../chat.css'
+import WindowPop from '../attachItem/WindowPop';
 
 function SendMessage(props) {
-
-
 
   let input = useRef()
 

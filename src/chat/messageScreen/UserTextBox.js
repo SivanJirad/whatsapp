@@ -1,5 +1,4 @@
-import SendMessage from "./SendMessage";
-import './chat.css'
+import '../chat.css'
 import './message.css'
 import MessageBox from "./MessageBox.js"
 

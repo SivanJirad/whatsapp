@@ -1,13 +1,10 @@
-import './chat.css'
+import '../../chat.css'
 import { React, useEffect, useRef, useState } from 'react';
-import { users } from '../Users';
-import avatar from './avatar.png' 
-import ChatList from './ChatList';
+import { users } from '../../../Users';
 
 function AddContact(props) {
 
     let name = useRef();
-    // delete me
 
     const addContact = function (event) {
         event.preventDefault();
@@ -41,20 +38,12 @@ function AddContact(props) {
 
         users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, nickName:users[indexOfUserInArrey].nickName, image: users[indexOfUserInArrey].image ,messages:[]}]
     }
-    }
-
-
-    const checkIfEnter = function(event){
-        if(event.key === 'Enter')
-          addContact();
-    }
+}
     
  
     return (
 
-<div className="top-row list-group-item d-flex align-items-center">
-            <img src={props.image} alt="Avatar" className="avatar"></img>
-            <span className="w-100 m-2 ms-3 nameContact chat-name" >{props.userName}</span>
+            <div>
 
             <i className="bi bi-person-plus" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
             <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

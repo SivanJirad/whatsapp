@@ -1,6 +1,6 @@
 import './App.css';
-import Register from './Register';
-import Signin from './Signin';
+import Register from './register/Register';
+import Signin from './sign/Signin';
 //import Chat from './Chat';
 import Chat from './chat/Chat';
 
