@@ -17,7 +17,7 @@ function Register() {
     const checkPass2 = function () {
         var pass = document.getElementById('Password').value
         var message = document.getElementById('StrongPass')
-        if (pass.length < 2 || !(/\d/.test(pass)) || !(/[a-zA-Z]/.test(pass))) {
+        if (pass.length < 8 || !(/\d/.test(pass)) || !(/[a-zA-Z]/.test(pass))) {
             message.innerHTML = '<span id="notValid" >not valid</span>'
             return false;
         }
