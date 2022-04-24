@@ -1,14 +1,20 @@
 import { useState, useRef, useEffect } from "react";
 import "./windowPop.css"
 import { Modal, Button } from "react-bootstrap";
+import { wait } from "@testing-library/user-event/dist/utils";
 
 
 
 function AttachAudio(props){
 
 
+    const [startMic, setStartMic] = useState(true)
+
+
+
+
       const [stream, setStream] = useState({
-        access: false,
+        // access: false,
         recorder: null,
       });
     
@@ -23,8 +29,9 @@ function AttachAudio(props){
 
     
       const chunks = useRef([]);
+
     
-      function getAccess() {
+    function getAccess(){
         setStopMic(true)
         navigator.mediaDevices.getUserMedia({ audio: true })
           .then((mic) => {
@@ -61,67 +68,42 @@ function AttachAudio(props){
                 available: true,
                 url:url
               });
+              
               setStream({
-                access: true,
+                // access: true,
                 recorder: null
             })
+
+            // setStartMic(false);
             };
     
             setStream({
-              access: true,
+              // access: true,
               recorder: mediaRecorder
             });
           })
       }
+      
+    
 
 
-      const sendMessage = function() {
-        props.setNewMessage("audio", recording.url)
-        setRecording({
-          active: false,
-          available: false,
-          url:null
-        });
-        setStopMic(false)
-      }
+      useEffect(() => {
+        if(recording.available === true){
+          const urlRecording = recording.url
+          props.setNewMessage("audio", urlRecording)
+          setRecording({
+            active: false,
+            available: false,
+            url:null
+          });
+          setStopMic(false)
+        }
+      }, [recording.available]);
 
 
-
-        // const [show, setShow] = useState(false);
-
-        // const handleClose = () => setShow(false);
-        // const handleShow = () => setShow(true);
       
         return (
           <div className="margin-from-mic">
-            {/* <Button onClick={handleShow}>
-              Launch demo modal
-            </Button> */}
-{/* 
-            <i  onClick={handleShow} className="bi bi-mic attchment-icon"></i>
-      
-            <Modal show={show}> */}
-              {/* <Modal.Header closeButton>
-                <Modal.Title>Record</Modal.Title>
-              </Modal.Header> */}
-              {/* <Modal.Body><audio ref={audioRef} controls={true} type="video.webm" /> */}
-      {/* <Button onClick={() => startRecorde()}>Start Rec </Button>
-      <button onClick={() => handleAudioStop()}>stop Rec </button>
-      <button onClick={() => handleReset()}>clear Rec </button>
-      <button onClick={() => handleAudioUpload()}>upload Rec </button> */}
-      {/* <audio
-        src={fileBlob ? URL.createObjectURL(fileBlob) : null}
-        controls={true}/>
-        </Modal.Body>
-              <Modal.Footer>
-              <Button variant="primary" onClick={() => startRecorde()}> Start recording </Button>
-              <Button variant="primary" onClick={() => handleAudioUpload()}>Upload recording </Button>
-              <Button onClick={() => handleAudioStop()}>stop Rec </Button>
-               <Button variant="primary" onClick={handleClose}> Close </Button>
-              </Modal.Footer>
-            </Modal> */}
-
-
 
             <i onClick={getAccess} className="bi bi-mic mic-color attchment-icon" data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="click me to record and than click again to send"></i>
@@ -129,10 +111,10 @@ function AttachAudio(props){
             {stopMic && <i onClick={() => stream.recorder.stop()} className="bi bi-mic attchment-icon" id="mic" data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="click again to send"></i>}
             {/* <button onClick={() => stream.recorder.stop()}>Stop Recording</button> */}
-            {recording.available &&  sendMessage()}
+            {/* {recording.available &&  sendMessage()} */}
          
           {/* <button onClick={getAccess}>Get Mic Access</button> */}
-
+            {/* {props.status && recordingOff()} */}
           </div>
 
         
