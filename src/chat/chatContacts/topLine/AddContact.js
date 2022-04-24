@@ -1,5 +1,5 @@
 import '../../chat.css'
-import { React, useEffect, useRef, useState } from 'react';
+import { React, useRef } from 'react';
 import { users } from '../../../Users';
 
 function AddContact(props) {
@@ -23,7 +23,7 @@ function AddContact(props) {
         }
         else if(contName===props.userName)
         {
-            alert("it Is You :(")
+            alert("it is You :(")
         }
         
     
@@ -31,10 +31,6 @@ function AddContact(props) {
         props.setContact((prev)=>{
             return prev.concat({userName: contName, nickName:users[indexOfUserInArrey].nickName , image: users[indexOfUserInArrey].image, messages:[]})
         })
-        console.log(...props.existContacts)
-        console.log(props.indexOfMe)
-        console.log( users[props.indexOfMe])
-        console.log( users[indexOfUserInArrey])
 
         users[props.indexOfMe].contacts = [...props.existContacts,  {userName: contName, nickName:users[indexOfUserInArrey].nickName, image: users[indexOfUserInArrey].image ,messages:[]}]
     }

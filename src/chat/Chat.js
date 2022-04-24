@@ -33,14 +33,14 @@ function Chat() {
     <div className="container center-chats">
       <div className="row">
 
-        <div className="col-sm-4" id="leftMenu">
+        <div className="col-4" id="leftMenu">
         <UserProfile setContact={setContact} userName={user.nickName} existContacts={user.contacts}  indexOfMe = {state.index} image ={user.image}/>
 
           <div className="scroll">
             {<ChatList contacts={contact} setUser={setUserChatPrassed} setMessages = {setMessage}/>}
           </div>
         </div>  
-        <div className="col-sm-8" id="chats">
+        <div className="col-8" id="chats">
         {userChatPrassed === null && <img src={welcome} className="welcome"></img>}
         
         {userChatPrassed !== null && <NameContact item={userChatPrassed}/>}

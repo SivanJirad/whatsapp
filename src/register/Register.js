@@ -7,8 +7,6 @@ import "../project.css";
 import avatar from './avatar.png' 
 
 
-
-
 function Register() {
 
     const [userName, setUserName] = useState("");
@@ -57,7 +55,7 @@ function Register() {
             alert('Password is not matching');
         }
         else if(UserNameExist() || userName === ''){
-            alert('User Name is not valid');
+            alert('This user name already exist, chose a different one');
         }
         else {
             const arr = []

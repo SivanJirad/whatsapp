@@ -8,8 +8,9 @@ cursor: pointer;
 position: absolute;
 top: 80%;
 left: 2%;
-background-color: rgb(66, 91, 233);
+background-color: rgb(66 115 216);
 border-radius: 10px;
+color: white;
 }
 
 .popover{
