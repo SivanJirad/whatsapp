@@ -1,14 +1,11 @@
 .textBox{
     margin: 0;
     width: 100%;
-    /* max-width: 100%; */
-    /* width: fit-content; */
 }
 
 .allChat{
   overflow: auto;
 }
-/* delete */
 
 .message{
     border-radius: 10px;

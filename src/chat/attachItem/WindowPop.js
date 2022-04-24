@@ -1,14 +1,10 @@
-import { useState } from 'react';
-import { Popover, Button, OverlayTrigger} from 'react-bootstrap';
+import { Popover, OverlayTrigger} from 'react-bootstrap';
 import "./windowPop.css"
 import AttachImage from './AttachImage'
 import AttachVideo from './AttachVideo';
 import AttachAudio from './AttachAudio';
 import AttachFile from './AttachFile';
 function WindowPop(props){
-
-      // delete me
-
 
     const popoverTop = (
       <Popover id="popover-positioned-top" title="Popover top">

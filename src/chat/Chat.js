@@ -6,9 +6,9 @@ import './chat.css'
 import UserTextBox from './messageScreen/UserTextBox'
 import {users} from '../Users'
 import welcome from './welcome.jpg' 
-
 import NameContact from './messageScreen/NameContact'
 import UserProfile from "./chatContacts/topLine/UserProfile";
+
 function Chat() {
 
 
@@ -19,19 +19,16 @@ function Chat() {
   const [userChatPrassed, setUserChatPrassed] = useState(null);
 
   const getArrOfUserContact = function(){
-    //
-    //מוצא את האינדקס של האיש קשר במערך של המשתמשים
-    //הבעיה שלא הוספנו את המשתמש החדש כאיש קשר ליתר המשתמשים
+    //index 1 - the index of the contact we are sending a message to in the users array 
+    // index 2 - the index of me in the array of the contacts whom i am talking with
       let index1 = users.findIndex(x => (x.userName ===  userChatPrassed.userName))
       let index2 = users[index1].contacts.findIndex(x => (x.userName ===  user.userName))
-    //המשתמש החדש לא קיים כאיש קשר אצל האיש קשר שאליו שלח הודעה
+    // if the user does not exist in my contacts array
       if(index2===-1){
-        let indexx1 = users.findIndex(x => (x.userName === user.userName))
-        let indexx2 = users[indexx1].contacts.findIndex(x => (x.userName ===  userChatPrassed.userName))
+        // indexx2 - the index of the contact i am talking with in my contacts array
+        let indexx2 = users[state.index].contacts.findIndex(x => (x.userName ===  userChatPrassed.userName))
         let massage = [];
-
-        users[indexx1].contacts[indexx2].messages.map((item)=> massage.push( {message:item.message, sentByMe:!item.sentByMe, type: item.type, date: item.date}))
-
+        users[state.index].contacts[indexx2].messages.map((item)=> massage.push( {message:item.message, sentByMe:!item.sentByMe, type: item.type, date: item.date}))
         users[index1].contacts= [...users[index1].contacts,{userName: user.userName, nickName:user.nickName, image:user.image, messages:massage }]
         index2=users[index1].contacts.length-1
       }

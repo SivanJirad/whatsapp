@@ -1,9 +1,7 @@
 
 import { useRef } from "react";
 import "./windowPop.css"
-import {useEffect, useState} from 'react';
 
-import React, { Component } from 'react';
 
 function AttachImage(props) {
 

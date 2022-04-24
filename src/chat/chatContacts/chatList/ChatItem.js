@@ -25,9 +25,8 @@ function ChatItem(props) {
     YEAR = DAY * 365;
 
 const getTimeAgoString = (timestamp) => {
-    // console.log()
     const differance = date - timestamp,
-        getElapsedString = (value, unit) => {
+        getTimeString = (value, unit) => {
             const round = Math.round(differance / value);
             return `${round} ${unit}${round > 1
                 ? 's'
@@ -37,32 +36,19 @@ const getTimeAgoString = (timestamp) => {
         return 'now';
     }
     if (differance < HOUR) {
-        return getElapsedString(MINUTE, 'minute');
+        return getTimeString(MINUTE, 'minute');
     }
     if (differance < DAY) {
-        return getElapsedString(HOUR, 'hour');
+        return getTimeString(HOUR, 'hour');
     }
     if (differance < MONTH) {
-        return getElapsedString(DAY, 'day');
+        return getTimeString(DAY, 'day');
     }
     if (differance < YEAR) {
-        return getElapsedString(MONTH, 'month');
+        return getTimeString(MONTH, 'month');
     }
-    return getElapsedString(YEAR, 'year');
+    return getTimeString(YEAR, 'year');
 };
-
-
-    const printText = function(){
-
-        let mes = props.contact.messages[props.contact.messages.length-1].message
-        if(mes.length > 18){
-            let new_mes = mes.substring(0, 18) + "..."
-            mes = new_mes    
-        }
-        return(
-            <div> {mes}</div>
-        );
-    }
 
     return (
         
@@ -83,29 +69,8 @@ const getTimeAgoString = (timestamp) => {
             </span> 
             
             <span className='time-ago'> {props.contact.messages.length !== 0  && getTimeAgoString(props.contact.messages[props.contact.messages.length-1].date)}   </span>
-       
-            {/* <span className="badge bg-primary rounded-pill">14</span> */}
-            {/* </span> */}
-
-           
-            </button>
-
-        
-
       
-
-
-
-
-// <li className="list-group-item d-flex align-items-center">
-// <i className="bi bi-house-fill"></i>
-// <span className="w-100 m-2 ms-3">Homes</span>
-// <span className="badge bg-primary rounded-pill">14</span>
-// </li>
-
-
-
-
+            </button>
 
     );
 }

@@ -23,11 +23,6 @@ color: white;
     cursor: pointer;
 }
 
-/* delete */
-
-/* .bs-popover-auto[data-popper-placement^=top]>.popover-arrow, .bs-popover-top>.popover-arrow {
-    bottom: calc(null)
-} */
 
 .chooseImage{
     display: none;
@@ -37,7 +32,6 @@ color: white;
 .mic-color{
     background-color: aqua;
     border-radius: 10px;
-    /* margin-top: 50pt; */
 }
 
 

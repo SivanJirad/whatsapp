@@ -1,12 +1,8 @@
 
 import { useRef } from "react";
 import "./windowPop.css"
-import {useEffect, useState} from 'react';
-
-import React, { Component } from 'react';
 
 function AttachFile(props) {
-    // delete me
 
     let fileInput = useRef();
 

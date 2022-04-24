@@ -11,10 +11,6 @@ function UserTextBox(props) {
                 {props.messages.map((item) => <MessageBox key={messageNum++} item={item} />)}
             </div>
 
-
-    
-
-
     );
 
 }

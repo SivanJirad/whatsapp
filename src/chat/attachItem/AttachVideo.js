@@ -2,7 +2,6 @@
 import "./windowPop.css"
 import { useRef } from "react";
 
-import React, { Component } from 'react';
 
 function AttachViedo(props){
 

@@ -1,11 +1,9 @@
 import './App.css';
 import Register from './register/Register';
 import Signin from './sign/Signin';
-//import Chat from './Chat';
 import Chat from './chat/Chat';
 
 import {BrowserRouter, Routes, Route, Router, Link} from 'react-router-dom';
-
 
 
 function App() {

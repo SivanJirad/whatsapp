@@ -1,14 +1,11 @@
-import { Redirect, Link, useNavigate } from 'react-router-dom'
-import { React, useEffect, useState } from 'react';
-import { contacts, users } from '../Users';
+import { Link, useNavigate } from 'react-router-dom'
+import { React, useState } from 'react';
+import {  users } from '../Users';
 import logo from '../wenLogo.jpg'
 import './sign.css'
 import '../project.css'
 
 function Signin() {
-        // delete me
-
-
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();

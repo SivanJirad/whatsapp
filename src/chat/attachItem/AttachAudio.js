@@ -8,13 +8,7 @@ import { wait } from "@testing-library/user-event/dist/utils";
 function AttachAudio(props){
 
 
-    const [startMic, setStartMic] = useState(true)
-
-
-
-
       const [stream, setStream] = useState({
-        // access: false,
         recorder: null,
       });
     
@@ -35,18 +29,8 @@ function AttachAudio(props){
         setStopMic(true)
         navigator.mediaDevices.getUserMedia({ audio: true })
           .then((mic) => {
-            let mediaRecorder;
-            try {
-              mediaRecorder = new MediaRecorder(mic, {
-                mimeType: "audio/webm"
-              });
-            } catch (err) {
-              console.log(err);
-            }
-    
-            const track = mediaRecorder.stream.getTracks()[0];
-            track.onended = () => console.log("ended");
-    
+            let mediaRecorder = new MediaRecorder(mic, {mimeType: "audio/webm"})
+ 
             mediaRecorder.onstart = function () {
               setRecording({
                 active: true,
@@ -70,23 +54,17 @@ function AttachAudio(props){
               });
               
               setStream({
-                // access: true,
                 recorder: null
             })
 
-            // setStartMic(false);
             };
     
             setStream({
-              // access: true,
               recorder: mediaRecorder
             });
           })
       }
       
-    
-
-
       useEffect(() => {
         if(recording.available === true){
           const urlRecording = recording.url
@@ -110,11 +88,6 @@ function AttachAudio(props){
             {stream.recorder!== null && !recording.active && stream.recorder.start()}
             {stopMic && <i onClick={() => stream.recorder.stop()} className="bi bi-mic attchment-icon" id="mic" data-bs-toggle="tooltip" data-bs-placement="right"
                                             title="click again to send"></i>}
-            {/* <button onClick={() => stream.recorder.stop()}>Stop Recording</button> */}
-            {/* {recording.available &&  sendMessage()} */}
-         
-          {/* <button onClick={getAccess}>Get Mic Access</button> */}
-            {/* {props.status && recordingOff()} */}
           </div>
 
         

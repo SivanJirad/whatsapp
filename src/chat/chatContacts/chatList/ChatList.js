@@ -1,6 +1,4 @@
 import ChatItem from "./ChatItem";
-import { React, useEffect, useState } from 'react';
-
 
 function ChatList(props){
 

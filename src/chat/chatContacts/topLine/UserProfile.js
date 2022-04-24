@@ -1,8 +1,5 @@
 import AddContact from "./AddContact";
 
-
-
-
 function UserProfile(props){
 
 
