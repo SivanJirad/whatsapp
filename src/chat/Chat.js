@@ -49,7 +49,7 @@ function Chat() {
       </div>
       <div>   
 
-        {userChatPrassed !== null && <SendMessage arrContactMessage={getArrOfUserContact()} setMessage={setMessage} myUser={user.nickName} chatUser={userChatPrassed.userName} arrContact={user.contacts} roll={roll} />}
+        {userChatPrassed !== null && <SendMessage arrContactMessage={getArrOfUserContact()} setMessage={setMessage} myUser={user.nickName} chatUser={userChatPrassed.userName} arrContact={user.contacts} />}
         </div>
         </div>
       </div>

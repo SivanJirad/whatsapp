@@ -1,9 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import './chat.css'
 // import { users } from '../Users'
 import WindowPop from './WindowPop';
 
 function SendMessage(props) {
+
+
 
   let input = useRef()
 
@@ -19,8 +21,9 @@ function SendMessage(props) {
     const currentTimeSatmp = new Date()
     props.arrContact[index1].messages = [...props.arrContact[index1].messages, { message: mes, sentByMe: true, type: type, date:currentTimeSatmp }]
     props.arrContactMessage.messages = [...props.arrContactMessage.messages, { message: mes, sentByMe: false, type: type, date:currentTimeSatmp }]
+    let mes2 = mes
     props.setMessage((prev) => {
-      return prev.concat({ message: mes, sentByMe: true, type: type, date:currentTimeSatmp })
+      return prev.concat({ message: mes2, sentByMe: true, type: type, date:currentTimeSatmp })
     })
   }
 
