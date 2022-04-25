@@ -54,7 +54,7 @@ function Register() {
             alert('Password is not matching');
         }
         else if(UserNameExist() || userName === ''){
-            alert('This user name already exist, chose a different one');
+            alert('This user name is not valid or already exists, chose a different one');
         }
         else {
             const arr = []
