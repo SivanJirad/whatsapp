@@ -56,7 +56,7 @@ function AddContact(props) {
                                 <div className="mb-3">
                                     <label htmlFor="recipient-name" className="col-form-label">Enter User Name</label>
                                     <input type="text" className="form-control" id="recipient-name" ref={name}></input>
-                                    <button type="submit" id="btn" className=" btn btn_start btn-primary" data-bs-dismiss="modal" onClick={addContact} > Login</button>
+                                    <button type="submit" id="btn" className=" btn btn_start btn-primary" data-bs-dismiss="modal" onClick={addContact} > Add</button>
                                 </div>
                             </form>
                         </div>
