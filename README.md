@@ -4,7 +4,7 @@ A message app (without server) allowing you to send messages to other contacts. 
 
 ## Set Up:
 This app uses react, react-boorstrap and react-router-dom.
-In order to run this app you must first run those installation commands:
+In order to run this app you must first install the packages using the commands:
 1. npm install
 2. npm install react-router
 3. npm install react-bootstrap
@@ -19,7 +19,7 @@ In order to run this app you must first run those installation commands:
 2. There are 5 users hard-coded in our program. You can sign in to Aviv Gefen using the password 1234567a.
 3. In order to record a message you must press on the record button. To stop and send the message just press on it again.
 
-## Features:
+## Screenshots:
 
 ![image](https://user-images.githubusercontent.com/88827751/164992979-252003bb-4068-42c5-93f2-2fb682272f35.png)
 
