@@ -2,9 +2,11 @@
 
 A message app (without server) allowing you to send messages to other contacts. Developed using Recat, Java Script, HTML and CSS.
 
+Devloped by - Ofri Zangi 207488305 & Sivan Jhirad 209193481
+
 ## Set Up:
 This app uses react, react-boorstrap and react-router-dom.
-In order to run this app you must first run those installation commands:
+In order to run this app you must first install the packages using the commands:
 1. npm install
 2. npm install react-router
 3. npm install react-bootstrap
