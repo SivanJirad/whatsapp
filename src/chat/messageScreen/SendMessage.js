@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import '../chat.css'
 import WindowPop from '../attachItem/WindowPop';
 

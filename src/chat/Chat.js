@@ -48,7 +48,7 @@ function Chat() {
           </div>
         </div>  
         <div className="col-8" id="chats">
-        {userChatPrassed === null && <img src={welcome} className="welcome"></img>}
+        {userChatPrassed === null && <img src={welcome} alt="welcome" className="welcome"></img>}
         
         {userChatPrassed !== null && <NameContact item={userChatPrassed}/>}
         <div className="message-scroll">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { users, contacts } from '../Users';
+import { users } from '../Users';
 import "./register.css";
 import logo from '../wenLogo.jpg'
 import "../project.css";
@@ -57,12 +57,10 @@ function Register() {
             alert('This user name is not valid or already exists, chose a different one');
         }
         else {
-            const arr = []
-            contacts.map((item)=> arr.push({userName:item.userName, nickName:item.nickName , image:item.image, messages:item.messages}))
             if (nickName === '')
-                users.push({ userName: userName, nickName: userName, image: image, password: password, contacts: arr });
+                users.push({ userName: userName, nickName: userName, image: image, password: password, contacts: [] });
             else
-                users.push({ userName: userName, nickName: nickName, image: image, password: password, contacts: arr });
+                users.push({ userName: userName, nickName: nickName, image: image, password: password, contacts: [] });
             navigate('/chats',  { state:{index:users.length - 1}});
         }
     }
@@ -77,7 +75,7 @@ function Register() {
 
     return (
         <div>
-            <img id="logoR" src={logo}></img>
+            <img id="logoR" alt="logo" src={logo}></img>
             <div className='centerR shadow-lg p-3 mb-5 bg-white rounded'>
 
                 <h1> Registration</h1>

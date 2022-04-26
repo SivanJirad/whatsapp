@@ -27,7 +27,7 @@ function Signin() {
 
     return (
         <div>
-            <img id="logo" src={logo}></img>
+            <img id="logo" alt="logo" src={logo}></img>
             <div id="sign" className='col-6 center shadow-lg p-3 mb-5 bg-white rounded'>
 
                     <h1> Sign in</h1>

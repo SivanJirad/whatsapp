@@ -15,7 +15,7 @@ function MessageBox(props) {
             }
             else if (props.item.type === 'image') {
                 return <div className={className}>
-                    <div><img src={props.item.message} className="sizeImage"></img></div>
+                    <div><img src={props.item.message} alt="message"className="sizeImage"></img></div>
                     <div  className='chat-log_time'>{props.item.date.toLocaleString()}</div>
                     </div>
             }
@@ -35,7 +35,7 @@ function MessageBox(props) {
             else if(props.item.type === 'file'){
                 return <div className={className}>
                 <div > 
-                <iframe src={props.item.message} className='sizeImage'> </iframe> </div>
+                <iframe src={props.item.message} title="textBox" className='sizeImage'> </iframe> </div>
                 <div  className='chat-log_time'>{props.item.date.toLocaleString()}</div>
                 </div>
             }
