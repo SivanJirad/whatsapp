@@ -16,8 +16,17 @@ In order to run this app you must first install the packages using the commands:
 
 ## Important To Read:
 1. Whenever you register you must enter a password with a least 8 characters, at least one number and a letter.
-2. There are 5 users hard-coded in our program. You can sign in to Aviv Gefen using the password 1234567a.
 3. In order to record a message you must press on the record button. To stop and send the message just press on it again.
+
+## Users:
+There are 6 users hard-coded in our program:
+1. Aviv Gefen (password 1234567a).
+2. Miri Masika
+3. Eden Ben Zaken
+4. Hanan Ben Ari
+5. Keren Peles
+6. Noa Kirel
+
 
 ## Screenshots:
 
