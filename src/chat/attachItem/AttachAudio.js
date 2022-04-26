@@ -1,8 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import "./windowPop.css"
-import { Modal, Button } from "react-bootstrap";
-import { wait } from "@testing-library/user-event/dist/utils";
-
 
 
 function AttachAudio(props){
